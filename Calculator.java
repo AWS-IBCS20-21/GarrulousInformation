@@ -16,19 +16,23 @@ public Calculator()
   {
     Calculator test = new Calculator();
     Scanner scanny = new Scanner(System.in);
-    int operation;
-    double num1;
-    double num2;
-    double result;
+    int operation = 0;
+    double num1 = 0;
+    double num2 = 0;
 
     System.out.println("This calculator can perform several operations. " +
     "Enter a number to choose an operation:");
     System.out.println("1.) Add \n2.) Muliply \n3.) Exponent");
     operation = scanny.nextInt();
-    System.out.println("Enter a number:");
-    num1 = scanny.nextDouble();
-    System.out.println("Enter a second number:");
-    num2 = scanny.nextDouble();
+    if(operation != 1 && operation != 2 && operation != 3){
+      System.out.println("You don't seem to have entered one of the available options");
+    } else {
+      System.out.println("Enter a number:");
+      num1 = scanny.nextDouble();
+      System.out.println("Enter a second number:");
+      num2 = scanny.nextDouble();
+    }
+
 
     if(operation == 1)
     {
@@ -39,8 +43,6 @@ public Calculator()
     } else if(operation == 3)
     {
       System.out.println(num1 + " to the power of " + num2 + " is " + test.toThePowerOf(num1, num2));
-    } else {
-      System.out.println("You don't seem to have entered one of the available options");
     }
   }
 
