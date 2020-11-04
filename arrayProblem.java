@@ -7,22 +7,16 @@ import java.util.*;
 public class arrayProblem
 {
 
-  
   public arrayProblem()
   {
-    int[] testArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-  }
 
-  public int[] getArray()
-  {
-    return testArray;
   }
 
   public static void main (String[] args)
   {
+    int[] myArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     arrayProblem test = new arrayProblem();
-    System.out.println(test.middleAverage(test.getArray));
-
+    System.out.println(test.middleAverage(myArray));
   }
 
   public double middleAverage(int[] myArray)
