@@ -1,6 +1,9 @@
 import java.util.*;
 import java.io.*;
 
+//NEXT: compatible w different capitalization in search terms + a lot of data entry + GUI (later)
+//also folkName should be an array, don't know why I didn't think of that earlier
+
 public class WitchyDatabase
 {
 
@@ -14,24 +17,15 @@ public class WitchyDatabase
   public static void main (String[] args)
   {
     WitchyDatabase herbInfo = new WitchyDatabase();
-    //herbInfo.buildListManually();
     herbInfo.buildList();
-    //herbInfo.print(herbInfo.getHerbsList()); //wonky cause I needed a workaround for the "static v non-static" error
+    //herbInfo.print(herbInfo.getHerbsList());
     herbInfo.find(); //same
   }
 
-  public ArrayList<Herb> getHerbsList()
+  public ArrayList<Herb> getHerbsList() //so I can reference herbsList from the main method
   {
     return herbsList;
   }
-
-  /*public void buildListManually()
-  {
-    Herb acacia = new Herb("Acacia", {"Acacia senegal"}, "Cape Gum", "Sun", "Air", {"NA"}, {"can't remember"});
-    herbsList.add(acacia);
-    Herb addersTongue = new Herb("Adder's Tongue", "Erythronium americanum", "Serpent's tongue", "Moon", "Water", "NA", "can't remember");
-    herbsList.add(addersTongue);
-  }*/ //broke this by adding the String arrays
 
   public void print(ArrayList<Herb> toBePrinted)
   {
@@ -76,18 +70,12 @@ public class WitchyDatabase
       }
 
       individualHerbs = fullText.split("!"); //array of Strings where each element contains all info on one herb
-      //System.out.println(individualHerbs.length);
       for(int j = 0; j <individualHerbs.length; j++)
       {
         Herb herb1 = new Herb();
-        //System.out.println(individualHerbs[j]); //testing
-        String temp = individualHerbs[j]; //not sure I need this
+        String temp = individualHerbs[j]; //could make this more concise
         String[] info = temp.split(":");
-        //System.out.println("Length: " + info.length); //testing
-        /*for(int m = 0; m < info.length; m++) //for testing
-        {
-          //System.out.println(info[m]);
-        }*/
+
         herb1.setName(info[0]);
         herb1.setScientific(info[1].split(","));
         herb1.setfolkName(info[2]);
@@ -130,12 +118,10 @@ public class WitchyDatabase
         }
       }
       this.print(matches);
-    } else if(property == 2) //doesn't currently work
+    } else if(property == 2)
     {
       System.out.println("Enter the scientific name of the herb you would like to find");
       target = miniScanny.nextLine();
-      //System.out.println(target);
-      //System.out.println(herbsList.get(0).returnScientific());
       for(int i = 0; i < herbsList.size(); i++) //search
       {
         for(int j = 0; j < herbsList.get(i).returnScientific().length; j++) //nested for loop because it's an array
@@ -223,13 +209,16 @@ public class WitchyDatabase
     {
       System.out.println("Enter the deity to which you would like these herbs to correspond");
       target = miniScanny.nextLine();
-      /*for(int i = 0; i < herbsList.size(); i++) //search
+      for(int i = 0; i < herbsList.size(); i++) //search
       {
-        if(herbsList.get(i).returnDeities().equals(target))
+        for(int j = 0; j < herbsList.get(i).returnDeities().length; j++) //nested for loop because it's an array
         {
-          matches.add(herbsList.get(i));
+          if(herbsList.get(i).returnDeities()[j].equals(target))
+          {
+            matches.add(herbsList.get(i));
+          }
         }
-      } */
+      }
       if(matches.size() == 0)
       {
         System.out.println("No matches");
@@ -243,6 +232,27 @@ public class WitchyDatabase
     } else if(property == 7)
     {
       System.out.println("Enter the power to which you would like these herbs to correspond");
+      target = miniScanny.nextLine();
+      for(int i = 0; i < herbsList.size(); i++) //search
+      {
+        for(int j = 0; j < herbsList.get(i).returnPowers().length; j++) //nested for loop because it's an array
+        {
+          if(herbsList.get(i).returnPowers()[j].equals(target))
+          {
+            matches.add(herbsList.get(i));
+          }
+        }
+      }
+      if(matches.size() == 0) //so it doesn't have an indexOutOfBounds error
+      {
+        System.out.println("No matches");
+      } else {
+        for(int k = 0; k < matches.size() - 1; k++) //print results
+        {
+          System.out.println(matches.get(k).returnName());
+        }
+        System.out.println(matches.get(matches.size()-1).returnName());
+      }
     } else {
       System.out.println("You don't seem to have entered one of the valid choices");
     }
