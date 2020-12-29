@@ -1,0 +1,59 @@
+Acacia:Acacia senegal:Cape Gum,Egyptian Thorn,Gum Arabic Tree:Sun:Air:Osiris,Astarte,Ishtar,Diana,Ra:Protection,Psychic Powers
+!Adam and Eve Roots:Orchis spp:NA:Venus:Water:NA:Love,Happiness
+!Adder's Tongue:Erythronium americanum:Serpent's tongue,Adder's Mouth,Dog's Tooth Violet:Moon:Water:NA:Healing
+!African Violet:Saintpaulia ionantha:NA:Venus:Water:NA:Spirituality,Protection
+!Agaric:Amanita muscaria:Death Angel,Death Cap,Fly Fungus:Mercury:Air:Dionysus:Fertility
+!Agrimony:Agrimonia eupatoria:Church Steeples,Cocklebur,Garclive,Sticklewort:Jupiter:Air:NA:Protection,Sleep
+!Ague Root:Aletris farinosa:Ague Grass,Bitter Grass,Black Root,Stargrass,Starwort:NA:NA:NA:Protection
+!Alfalfa:Medicago saliva:Buffalo Herb,Lucerne,Purple Medic:Venus:Earth:NA:Prosperity,Anti-hunger,Money
+!Alkanet:Alkanna tinctoria,Anchusa spp.:Dyer's Bugloss,Orcanet,Dyer's Alkanet:NA:Water:NA:Purification,Prosperity
+!Allspice:Pimenta officinalis, Pimenta dioica:NA:Mars:Fire:NA:Money,Luck,Healing
+!Almond:Prunus communis,Prunus dulcis:Greek Nuts:Mercury:Air:Attis,Mercury,Thoth,Hermes:Money,Prosperity,Wisdom
+!Aloe:Aloe vera, Aloe spp.:Burn Plant,Medicine Plant:Moon:Water:NA:Protection,Luck
+!Wood Aloes:Cardia dichotoma,Aquilaria agallocha:Lignum Aloes:Venus:Water:NA:Love,Spirituality
+!Althea:Althaea officinalis:Marshmallow,Mortification Root,Sweet Weed:NA:Water:NA:Protection,Psychic Powers
+!Alyssum:Alyssum spp.:Alison,Madwort:NA:NA:NA:Protection,Moderating Anger
+!Amaranth:Amaranthus hypochondriacus:Flower of Immortality,Love-Lies-Bleeding,Red Cockscomb,Velvet Flower,Princess Feather:Saturn:Fire:Artemis:Healing,Protection,Invisibility
+!Anemone:Anemone pulsatilla:Meadow Anemone,Pasque Flower,Passe Flower,Wind Flower:Mars:Fire:Adonis,Venus:Health,Protection,Healing
+!Angelica:Angelica archangelica:Archangel,Masterwort,Garden Angelica:Sun:Fire:Venus:Exorcism,Protection,Healing,Visions
+!Anise:Pimpinella anisum:Anneys,Aniseseed,Yanisin,Sweet Cumin:Jupiter:Air:NA:Protection,Purification,Youth
+!Apple:Pyrus spp.:Fruit of the Gods,Fruit of the Underworld,Silver Branch,The Silver Bough,Tree of Love:Venus:Water:Venus,Dionysus,Olwen,Apollo,Hera,Athena,Aphrodite,Diana,Zeus,Iduna:Love,Healing,Garden Magic,Immortality
+!Apricot:Prunus armeniaca:NA:Venus:Water:Venus:Love
+!Gum Arabic:Acacia senegal,Acacia vera:Arabic,Egyptian Gum,Indian Gum:Sun:Air:NA:Spirituality,Purification
+!Arbutus:Arbutus unede:NA:Mars:Fire:Cardea:Exorcism,Protection
+!Asafoetida:Ferula assa-foetida,Ferula foetida,Ferula rurbicaulis:Assyfetida,Devil's Dung,Food of the Gods:Mars:Fire:NA:Exorcism,Purification,Protection
+!Ash:Fraxinus excelsior,Fraxinus americana:NA:Sun:Fire:Uranus,Poseidon,Thor,Woden,Neptune,Mars,Gwydion:Protection,Prosperity,Sea Rituals,Health
+!Aspen:Populus tremuloides:European Aspen,Poplar,Quaking Aspen:Mercury:Air:NA:Eloquence,Anti-Theft
+!Aster:Callistephus chinensis:Michaelmas Diasy,Starwort:Venus:Water:Venus:Love
+!Avens:Geum urbanum:Assaranaccara,Bennet,Blessed Herb,Clove Root,Colewort,Golden Star,Goldy Star,Harefoot,Herb Bennet,Star of the Earth,Way Bennet,Yellow Avens:Jupiter:Fire:NA:Exorcism,Purification,Love
+!Avocado:Persea americans:Alligator Pear:Venus:Water:NA:Love,Lust,Beauty
+!Bachelor's Buttons:Centaurea cynanus:Devil's Flower,Red Campion,Bluet,Hurtlesickle,Blue Bottle:Venus:Water:Robin Goodfellow:Love
+!Lemon Balm:Melissa officinalis:Bee Balm,Lemon Balsam,Melissa,Sweet Balm,Sweet Melissa:Moon:Water:NA:Love,Success,Healing
+!Balm of Gilead:Commiphora opabalsamum,Abies balsamea,Populus balsamifera var. balsamifera, Populus jackii:Balessan,Balsam Tree,Bechan:Venus:Water:NA:Love,Manifestations,Protection,Healing
+!Bamboo:Bambusa vulgaris:NA:NA:NA:Hinna:Protection,Luck,Hex-Breaking,Wishes
+!Banana:Musa sapientum:NA:Venus:Water:Kanaloa:Fertility,Potency,Prosperity
+!Banyan:Ficus benghalensis:Arched Fig,Indian Fig Tree,Indian God Tree,Vada Tree:Jupiter:Air:Maui:Luck
+!Barley:Hordeum spp. vulgare:Malt:Venus:Earth:NA:Love,Healing,Protection
+!Basil:Ocimum basilicum:American Dittany,St. Joseph's Wort,Sweet Basil,Witches Herb:Mars:Fire:Vishnu,Erzulie:Love,Exorcism,Wealth,Flying,Protection
+!Bay:Laurus nobilis:Bay Laurel,Bay Tree,Grecian Laurel,Laurel,Nobel Laurel,Roman Laural,Sweet Bay:Sun:Fire:Aesculapius,Apollo,Ceres,Faunus,Eros:Protection,Psychic Powers,Healing,Purification,Strength
+!Bean:Phaseolus spp.:Poor Man's Meat:Mercury:Air:Demeter,Cardea:Protection,Exorcism,Wart Charming,Reconciliations,Potency,Love
+!Fragrant Bedstraw:Galium verum,Garlium triflorum:Cleavers,Madder's Cousin:Venus:Water:NA:Love
+!Beech:Fagus sylvatica:Boke,Buche:Saturn:NA:NA:Wishes
+!Beet:Beta vulgaris:Mangel,Mangold:Saturn:Earth:NA:Love
+!Belladonna:Atropa belladonna:Banewort,Black Cherry,Deadly Nightshade,Death's Herb,Devil's Cherries,Fair Lady,Great Morel,Witch's Berry:Saturn:Water:Hecate,Bellona,Circe:NA
+!Benzoin:Styrax benzion:Benjamen,Gum Benzoin:Sun:Air:NA:Purification,Prosperity
+!Orange Bergamot:Mentha citrata:Bergamot,Orange Mint:Mercury:Air:NA:Money
+!Wild Bergamot:Monarda fistulosa:Horsemint,Bee Balm,Monarda:NA:Air:NA:Clarity
+!Be-Still:Thevetia peruviana,Thevetia nereifolia:Trumpet Flower,Yellow Oleander,Lucky Nut:NA:NA:NA:Luck
+!Wood Betony:Stachys betonica,Stachys officinalis,Betonica officinalis:Bishopwort,Lousewort,Purple Betony:Jupiter:Fire:NA:Protection,Purification,Love
+!Birch:Betula pendula,Betula pubescens,Betula lenta,Betula alba:Lady of the Woods:Venus:Water:Thor:Protection,Exorcism,Purification
+!Bistort:Polygonum bistorta:Dragonwort,Easter Giant,English Sepentary,Osterick,Passions,Patience Dock,Red Legs,Snakeweed,Sweet Dock:Saturn:Earth:NA:Psychic Powers,Fertility
+!Bittersweet:Celastrus scandens,Solanum dulcamara:Wax Work,False Bittersweet,Violet Bloom,Felonwort,Woody Nightshade,Scarlet Berry,Dulcamara,Bitter Nightshade:Mercury:Air:NA:Protection,Healing
+!Blackberry:Rubus villosus:Bly,Bramble,Brable-Kite,Bumble-Kite,Cloudberry,Dewberry,Goutberry,High Blackberry,Thimbleberry:Venus:Water:Brigit:Healing,Money,Protection
+!Bladderwrack:Fucus vesiculosus:Bladder Fucus,Cutweed,Kelp,Sea Spirit,Seawrack,Sea Oak,Black Tang:Moon:Water:NA:Protection,Sea Spells,Wind Spells,Money,Psychic Powers
+!Bleeding Heart:Dicentra spectabilis,Dicentra formosa:NA:Venus:Water:NA:Love
+!Bloodroot:Sanguinaria canadensis:King Root,Red Root,Tetterwort:Mars:Fire:NA:Love,Protection,Purification
+!Bluebell:Campanula rotundifolia:Harebell:NA:NA:NA:Luck,Truth
+!Blueberry:Vaccinum frondosum,Vaccinum angustifolium,Vaccinum corymbosum,Vaccinum pallidum:Bilberry:NA:NA:NA:Protection
+!Blue Flag:Iris veriscolor:Flag Lily,Fleur-de-Lys,Iris,Liver Lily,Poison Lily,Poison Flag,Snake Lily,Water Flag,Water Iris:Venus:Water:NA:Money
+!
