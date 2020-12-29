@@ -56,4 +56,19 @@ Acacia:Acacia senegal:Cape Gum,Egyptian Thorn,Gum Arabic Tree:Sun:Air:Osiris,Ast
 !Bluebell:Campanula rotundifolia:Harebell:NA:NA:NA:Luck,Truth
 !Blueberry:Vaccinum frondosum,Vaccinum angustifolium,Vaccinum corymbosum,Vaccinum pallidum:Bilberry:NA:NA:NA:Protection
 !Blue Flag:Iris veriscolor:Flag Lily,Fleur-de-Lys,Iris,Liver Lily,Poison Lily,Poison Flag,Snake Lily,Water Flag,Water Iris:Venus:Water:NA:Money
+!Bodhi:Ficus religiosa:Bo-Tree,Sacred Tree:Jupiter:Air:Buddha,Vishnu:Fertility,Protection,Wisdom,Meditation
+!Boneset:Eupatorium perfoliatum:Agueweed,Crosswort,Feverwort,Indian Sage,Sweating Plant,Teasel,Thoroughwort,Wood Boneset:Saturn:Water:NA:Protection,Exorcism
+!Borage:Borago officinalis:Bugloss,Burrage,Herb of Gladness,Star Flower:Jupiter:Air:NA:Courage,Psychic Powers
+!Bracken:Pteridium aquilinum:NA:Mercury:Air:NA:Healing,Rain Magic,Prophetic Dreams
+!Brazil Nut:Bertholletia excellsa:NA:Mercury:Air:NA:Love
+!Briony:Bryony spp. dioica:Gout Root,Ladies' Seal,Mad Root,Snake Grape,Tamus,Tetterberry,Wild Hops,Wild Vine,Wood Vine,English Mandrake:Mars:Fire:NA:Image Magic,Money,Protection
+!Bromeliad:Crypanthus spp.:Chameleon Star,Earth Star:Sun:Air:NA:Protection,Money
+!Broom:Cytisus scoparius:Banal,Basam,Besom,Broom Tops,Irish Broom,Scotch Broom,Hog Weed:Mars:Air:NA:Purification,Protection,Wind Spells,Divination
+!Buchu:Barosma betulina,Agathosma betulina:Buku:Moon:Water:NA:Psychic Powers,Prophetic Dreams
+!Buckthorn:Rhamnus catharticus,Rhamnus frangula,Rhamnus spp.:Hart's Thorn:Saturn:Water:NA:Protection,Exorcism,Wishes,Legal Matters
+!Buckwheat:Fagopyrum spp.:Beechwheat,Brank,French Wheat,Saracen Corn:Venus:Earth:NA:Money,Protection
+!Burdock:Arctium lappa:Bardana,Beggar's Buttons,Burrseed,Clotbur,Cockleburr,Great Burdock,Happy Major,Hardock,Hurrburr,Personata:Venus:Water:NA:Protection,Healing
+!Cabbage:Brassica oleracea:NA:Moon:Water:NA:Luck
+!Cactus:NA:NA:NA:NA:NA:Protection,Chastity
+!Calamus:Acorus calamus:Gladdon,Myrtle Flag,Myrtle Grass,Myrtle Sedge,Sweet Cane,Sweet Flag,Sweet Grass,Sweet Root,Sweet Rush,Sweet Sedge:Moon:Water:NA:Luck,Healing,Money,Protection
 !
