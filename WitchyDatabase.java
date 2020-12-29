@@ -2,7 +2,6 @@ import java.util.*;
 import java.io.*;
 
 //NEXT: a lot of data entry + GUI (later)
-//also folkName should be an array, don't know why I didn't think of that earlier
 
 public class WitchyDatabase
 {
@@ -38,7 +37,12 @@ public class WitchyDatabase
         System.out.print(toBePrinted.get(i).returnScientific()[j] + ", ");
       }
 
-      System.out.print(toBePrinted.get(i).returnfolkName() + ", " + toBePrinted.get(i).returnPlanet() + ", " + toBePrinted.get(i).returnElement() + ", ");
+      for(int k = 0; k < toBePrinted.get(i).returnfolkName().length; k++)
+      {
+        System.out.print(toBePrinted.get(i).returnfolkName()[k] + ", ");
+      }
+
+      System.out.print(toBePrinted.get(i).returnPlanet() + ", " + toBePrinted.get(i).returnElement() + ", ");
 
       for(int m = 0; m < toBePrinted.get(i).returnDeities().length; m++)
       {
@@ -78,13 +82,14 @@ public class WitchyDatabase
 
         herb1.setName(info[0]);
         herb1.setScientific(info[1].split(","));
-        herb1.setfolkName(info[2]);
+        herb1.setfolkName(info[2].split(","));
         herb1.setPlanet(info[3]);
         herb1.setElement(info[4]);
         herb1.setDeities(info[5].split(","));
         herb1.setPowers(info[6]. split(","));
 
         herbsList.add(herb1);
+        System.out.println("added: " + herb1.returnName());
       }
     } catch (FileNotFoundException e)
     {
@@ -148,9 +153,12 @@ public class WitchyDatabase
       target = miniScanny.nextLine().toLowerCase();
       for(int i = 0; i < herbsList.size(); i++) //search
       {
-        if(herbsList.get(i).returnfolkName().toLowerCase().equals(target))
+        for(int j = 0; j < herbsList.get(i).returnfolkName().length; j++) //nested for loop because it's an array
         {
-          matches.add(herbsList.get(i));
+          if(herbsList.get(i).returnfolkName()[j].toLowerCase().equals(target))
+          {
+            matches.add(herbsList.get(i));
+          }
         }
       }
       if(matches.size() == 0)
