@@ -220,4 +220,205 @@ Jupiter:Air:NA:Luck,Protection,Love
 !Hydrangea:Hydrangea arborescens:Seven Barks:NA:NA:NA:Hex-Breaking
 !Hyssop:Hyssopus officinalis:Hyssop Herb:Jupiter:Fire:NA:Purification,Protection
 !Indian Paint Brush:Castilleja spp.:Snake's Friend,Snake's Matches:Venus:Water:NA:Love
+!Iris:Iris florentina,Iris spp.:NA:Venus:Water:Iris,Juno:Purification,Wisdom
+!Irish Moss:Chondrus cripus:Pearl Moss:Moon:Water:NA:Money,Luck,Protection
+!Ivy:Hedera helix,Hedera spp.:Gort:Saturn:Water:Bacchus,Dionysus,Osiris:Protection,Healing
+!Jasmine:Jasminum grandiflorum,Jasminum officinale,Jasminum odoratissimum:Moonlight on the Grove,Peot's Jessamine:Moon:Water:Vishnu:Love,Money,Prophetic Dreams
+!Job's Tears:Coix lachryma-jobi:Tear Grass:NA:NA:NA:Healing,Wishes,Luck
+!Joe-Pye Weed:Eupatorium spp. purpureum:Gravelroot,Hempweed,Joe-Pie,Jopi Weed,Trumpet Weed:NA:NA:NA:Love,Respect
+!Juniper:Juniperus communes:Gin-Berry,Gin Plant:Sun:Fire:NA:Protection,Anti-Theft,Love,Exorcism,Health
+!Kava-Kava:Piper methysticum:Ava,Ava Pepper,Ava Root,Awa Root,Intoxicating Pepper:Saturn:Water:Lono,Kane,Kanaloa:Visions,Protection,Luck
+!Kelp:Laminaria digitata:NA:Jupiter:Water:NA:Travel,Protection
+!Knotweed:Polygonum aviculare:Armstrong,Cowgrass,Hogweed,Knotgrass,Nine Joints,Ninety Knot,Pigrush,Pigweed,Red Robin,Sparrow's Tongue:Saturn:Earth:NA:Binding,Health
+!Lady's Mantle:Alchemilla vulgaris:Bear's Foot,Lion's Foot,Nine Hooks,Stellaria:Venus:Water:NA:Love
+!Lady's Slipper:Cypripedium pubescens:Yellow Moccasin Flower,Nerveroot,American Valerian:Saturn:Water:NA:Protection
+!Larch:Larix europaea:NA:NA:NA:NA:Protection,Anti-Fire
+!Larkspur:Delphinium ajacus,Delphinium consolida,Delphinium spp.:Delphinium,Knight's Spur,Lark's Heal,Staggerweed:Venus:Water:NA:Health,Protection
+!Lavender:Lavendula officinale,Lavendula vera:Elf Leaf,Spike:Mercury:Air:NA:Love,Protection,Sleep,Chastity,Longevity,Purification,Happiness,Peace
+!Leek:Allium porrum:NA:Mars:Fire:NA:Love,Protection,Exorcism
+!Lemon:Citrus limon:NA:Moon:Water:NA:Longevity,Purification,Love,Friendship
+!Lemongrass:Cymbopogon citratus:NA:Mercury:Air:NA:Repel Snakes,Lust,Psychic Powers
+!Lemon Verbena:Lippia citriodora:NA:Mercury:Air:NA:Purification,Love
+!Lettuce:Lactuca saliva:Garden Lettuce,Sleep Wort:Moon:Water:NA:Chastity,Protection,Love Divination,Sleep
+!Licorice:Glycyrrhiza glabra:Sweet Root:Venus:Water:NA:Lust,Love,Fidelity
+!Life-Everlasting:Anaphalis spp.,Gnaphalium uliginosum,Antennaria dioica:Chafe Weed,Everlasting,Field Balsam,Indian Posy,Old Field Balsam,
+Sweet Scented Live-Everlasting,White Balsam:NA:NA:NA:Longevity,Health,Healing
+!Lilac:Syringa vulgaris:Common Lilac:Venus:Water:NA:Exorcism,Protection
+!Lily:Lilium spp.:NA:Moon:Water:Venus,Jono,Nepthys,Kwan Yin:Protection,Breaking Love Spells
+!Lily of the Valley:Convallaria majalis:Convallaria,Jacob's Ladder,Ladder to Heaven,Lily Constancy,Male Lily,May Lily,Our Lady's Tears:Mercury:Air:Apollo,Aesculapius:
+Mental Powers,Happiness
+!Lime:Citrus aurantifolia,Limetta Limetta:NA:Sun:Fire:NA:Healing,Love,Protection
+!Linden:Tila europaea:Lime,Lime Tree,Linnflowers:Jupiter:Air:Venus,Lada:Protection,Immortality,Luck,Love,Sleep
+!Liquidamber:Liquidambar orientalis,Liquidambar styraciflua,Liquidambar spp.:Styrax,Sweet Gum,Witch Burr:Sun:Fire:NA:Protection
+!Liverwort:Hepatica nobilis,Anemone hepatica,Peltigera canina:Heart Leaf,Herb Trinity,Liverleaf,Liverweed,Trefoil:Jupiter:Fire:NA:Love
+!Lobelia:Lobelia inflata:Asthma Weed,Bladderpod,Gagroot,Indian Tobacco,Pukeweed:Saturn:Water:NA:Halting Storms,Love
+!Loosestrife:Lythrum salicaria:Blooming Sally,Lythrum,Purple Willow Herb,Rainbow Weed,Sage Willow:Moon:Earth:NA:Peace,Protection
+!Lotus:Nelumbium nelumbo,Nymphaea nelumbo,Nelumbo nucifera,Nymphaea lotus:Egyptian Lotus:Moon:Water:NA:Protection,Lock-Opening
+!Lovage:Levisticum officinale:Chinese Lovage,Cornish Lovage,Italian Lovage,Italian Parsley,Love Herbs,Love Rod,Love Root,Loving Herbs,Sea Parsley:
+Sun:Fire:NA:Love
+!Love Seed:Lomatium foeniculaceum:NA:Venus:Water:NA:Love,Friendship
+!Lucky Hand:Orchis spp.:Hand of Power,Hand Root,Helping Hand:Venus:Water:NA:Employment,Luck,Protection,Money,Travel
+!Mace:Myristica fragrans:NA:Mercury:Air:NA:Psychic Powers,Mental Powers
+!Maguey:Agave spp.:Agave:Mars:Fire:NA:Lust
+!Magnolia:Magnolia grandifolia,Magnolia virginiana,Magnolia stellata:Blue Magnolia,Cucumber Tree,Swamp Sassafras:Venus:Earth:NA:Fidelity
+!Mountain Mahogany:Cercocarpus ledifolius:NA:NA:Fire:NA:Anti-Lightning
+!Maidenhair:Adiantum pedatim:Maidenhair Fern,Venus Hair,Rock Fern:Venus:Water:Venus:Beauty,Love
+!Male Fern:Dryopteris felixmas:Basket Fern,Marginal Shield Fern,Male Shield Fern,Marginal Fern:Mercury:Air:NA:Luck,Love
+!Mallow:Malva sylvestris,Malva spp.:High Mallow,Cheese Flower,Blue Mallow,Common Mallow:Moon:Water:NA:Love,Protection,Exorcism
+!Mandranke:Atropa mandragora,Mandragora officinale:Alraun,Brain Thief,Gallows,Herb of Circe,Ladykins,Mandragor,Raccoon Berry,Wild Lemon,
+Womandrake:Mercury:Fire:Hecate,Hathor:Protection,Fertility,Money,Love,Health
+!Maple:Acer spp.:NA:Jupiter:Air:NA:Love,Longevity,Money
+!Marigold:Calendula officinalis:Bride of the Sun,Calendula,Drunkard,Goldes,Husbandman's Dial,Marybud,Mary Gowles,Summer's Bride:
+Sun:Fire:NA:Protection,Prophetic Dreams,Legal Matter,Psychic Powers
+!Marjoram:Origanum marjorana,Origanum vulgare:Joy of the Mountain,Knotted Marjoram,Mountain Mint,Pot Marjoram,Sweet Marjoram,Wintersweet:Mercury:Air:Venus,Aphrodite:Protection,Love,Happiness,Health,Money
+!Masterwort:Imperatoria ostruthium:Hog Fennel,Imperatoria:Mars:Fire:NA:Strength,Courage,Protection
+!Mastic:Pistacia lentiscus:Gum Mastic,Pistachia Galls:Sun:Air:NA:Psychic Powers,Manifestations,Lust
+!May Apple:Podophyllum peltatum:American Mandrake,Duck's Foot,Hog Apple,Raccoon Berry,Wild Lemon:Mercury:Fire:NA:Money
+!Meadow Rue:Thalictrum spp.:Flute Plant:NA:NA:NA:Love,Divination
+!Meadowsweet:Spiraea filipendula,Filipendula ulmaria,Spiraea ulmaria:Bride of the Meadow,Bridewort,Gravel Root,Lady of the Meadow,Little Queen,Meadowwort,Queen of the Meadow,Steeplebush,Trumpet Weed:
+Jupiter:Air:NA:Love,Divination,Peace,Happiness
+!Mesquite:Prosopis juliflora:NA:Moon:Water:NA:Healing
+!Mimosa:Acacia dealbata:Mimosa Pudica:Saturn:Water:NA:Protection,Love,Prophetic Dreams,Purification
+!Mint:Mentha spp.:Garden Mint:Mercury:Air:Pluto,Hecate:Money,Lust,Healing,Travel,Exorcism,Protection
+!Mistletoe:Viscum album,Phoradendron leucarpum,Phoradendron flavescens:All Heal,Birdlime,Devil's Fuge,European Mistletoa,Golden Bough,Holy Wood,Thunderbesem,Witches Broom,Wood of the Cross:Sun:Air:Apollo,Freya,Frigga,Venus,Odin:
+Protection,Love,Hunting,Fertility,Health,Exorcism
+!Molukka:NA:Fairy's Eggs,Virgin Mary's Nut:NA:NA:NA:Protection
+!Moonwort:Bortychium spp.:Unshoe-Horse:Moon:Water:NA:Money,Love
+!Morning Glory:Ipomoea spp.:Bindweed:Saturn:Water:NA:Happiness,Peace
+!Moss:NA:NA:NA:NA:NA:Luck,Money
+!Mugwort:Artemisia vulgaris:Artemis Herb,Felon Herb,Naughty Man,Old Man,Old Uncle Henry,Sailor's Tobacco,St. John's Plant:Venus:Earth:Artemis,Diana:Strength,Psychic Powers,Protection,Prophetic Dreams,Healing,Astral Projection
+!Mulberry:Morus nigra,Morus rubra:NA:Mercury:Air:Minerva,Diana:Protection,Strength
+!Mullein:Verbascum thapus:Aaron's Rod,Blanket Leaf,Candlewick Plant,Clot,Doffle,Feltwort,Flannel Plant,Graveyard Dust,Hag's Tapers,Hedge Taper,
+Jupiter's Staff,Lady's Foxglove,Old Man's Fennel,Peter's Staff,Shepherd's Club,Shepherd's Herb,Torches,Velvetback,Velvet Plant:Saturn:Fire:Jupiter:Courage,Protection,Health,Love Divination,Exorcism,Sleep
+!Black Mustard:Bassica spp.:NA:Mars:FIre:Aesculapius:Fertility,Protection,Mental Powers
+!Myrrh:Commiphora myrrha:Gum Myrrh Tree:Moon:Water:Isis,Adonis,Ra,Marian:Protection,Exorcism,Healing,Spirituality
+!Myrtle:Myrtus communis:NA:Venus:Water:Venus,Artemis,Aphrodite,Hathor,Astarte,Ashtoreth,Marian:Love,Fertility,Youth,Peace,Money
+!Nettle:Urtica dioica:Stinging Nettle:Mars:Fire:Thor:Exorcism,Protection,Healing,Lust
+!Norfolk Island Pine:Auricaria excelsa:NA:Mars:Fire:NA:Protection,Anti-Hunger
+!Nutmeg:Myristica fragrans:NA:Jupiter:Fire:NA:Luck,Money,Health,Fidelity
+!Nuts:NA:NA:NA:NA:NA:Fertility,Prosperity,Love,Luck
+!Oak:Quercus alba:White Oak,Jove's Nuts:Sun:Fire:Dagda,Diana,Jupiter,Thor,Zeus,Heme,Janus,Rhea,Cybele,Hecate,Pan,Erato:Protection,Health,Money,Healing,Potency,Fertility,Luck
+!Oats:Avena sativa:Oatmeal:Venus:Earth:NA:Money
+!Oleander:Nerium oleander:Rose Bay,Dog Bane:Saturn:Earth:NA:Love
+!Olive:Olea europaea:NA:Sun:Fire:Athena,Apollo,Irene,Minerva,Ra:Healing,Peace,Fertility,Potency,Protection,Lust
+!Onion:Allium cepa:NA:Mars:Fire:Isis:Protection,Exorcism,Healing,Money,Prophetic Dreams,Lust
+!Orange:Citrus sinesis:Love Fruit:Sun:Fire:NA:Love,Divination,Luck,Money
+!Orchid:Orchis spp.:Levant Salap:Venus:Water:NA:Love
+!Oregon Grape:Berberis aquifolium:California Barberry,Oregon Grape Root,Rocky Mountain Grape,Trailing Grape,Wild Oregon Grape:NA:Earth:NA:Money,Popularity
+!Orris:Iris germanica var. florentina:Florentine Iris,Queen Elizabeth Root:Venus:Water:Aphrodite,Isis,Osiris,Hera,Iris:Love,Protection,Divination
+!Date Palm:Phoenix dactylifera:NA:Sun:Air:Taht,Apollo,Artemis,Hecate,Isis,Ra:Fertility,Potency
+!Pansy:Viola tricolor:Banewort,Bird's Eye,Bonewort,Bouncing Bet,Garden Violet,Heart's Ease,Horse Violet,Johnny Jumper,Johnny Jumps-Up,
+Kiss-Me-At-The-Garden-Gate,Little Stepmother,Love Idol,Love-in-Idleness,Love-Lies Bleeding,Loving Idol,Meet-Me-In-The-Entry,Stephmother:
+Saturn:Water:NA:Love,Rain Magic,Love Divination
+!Papaya:Catica papaya:Paw-Paw:Moon:Water:NA:Love,Protection
+!Papryus:Cyperus papyrus:NA:Mercury:Air:NA:Protection
+!Parosela:Parosela spp:,Dalea spp.:Citrus Plant,Desert Rue:NA:NA:NA:Hunting
+!Parsley:Petroselinum crispum,Petroselinum sativum:Devil's Outmeal,Rock Parsley:Mercury:Airt:Persephone:Lust,Protection,Purification
+!Passion Flower:Passiflora incarnata:Passion Vine:Venus:Water:NA:Peace,Sleep,Friendships
+!Patchouly:Pogostemon cablin,Pogostemon patchouli:NA:Saturn:Earth:NA:Money,Fertility,Lust
+!Pea:Pisum sativum:NA:Venus:Earth:NA:Money,Love
+!Peach:Prunus persica:NA:Venus:Water:NA:Love,Exorcism,Longevity,Fertility,Wishes
+!Pear:Pyrus communis:NA:Venus:Water:NA:Lust,Love
+!Pecan:Carya illinoensis:NA:Mercury:Air:NA:Money,Employment
+!Pennyroyal:Mentha pulegium:European Pennyroyal,Lurk-In-The-Ditch,Mosquito Plant,Organ Broth,Organ Tea,Pudding Grass,Run-By-The-Ground,Tickweed:
+Mars:Fire:Demeter:Strength,Protection,Peace
+!Peony:Paeonia officinalis:NA:Sun:Fire:NA:Protection,Exorcism
+!Pepper:Piper nigrum:Black Pepper:Mars:Fire:NA:Protection,Exorcism
+!Peppermint:Mentha piperita:Brandy Mint:Mercury:Fire:Pluto:Purification,Sleep,Love,Healing,Psychic Powers
+!Pepper Tree:Schinus molle:California Pepper Tree,Jesuit's Balsam,Peruvian Mastic Tree:Mars:Fire:NA:Purification,Healing,Protection
+!Periwinkle:Vinca minor:Blue Buttons,Devil's Eye,Joy on the Ground,Socerer's Violet:Venus:Water:NA:Love,Lust,Mental Powers,Money,Protection
+!Persimmon:Diospyros virginiana:NA:Venus:Water:NA:Healing,Luck
+!Pilot Weed:Silphium laciniatum:Bumweed,Compass Point,Rosin Weed:NA:NA:NA:Protection
+!Pimento:Pimenta dioica:NA:Mars:Fire:NA:Love
+!Pimpernel:Pimpinella saxifraga,Pimpinella spp.:Blessed Herb,Greater Pimpernel,Herb of Mary,Poorman's Weatherglass,Shepherd's Weatherglass:Mercury:Air:NA:Protection,Health
+!Pine:Pinus spp.:NA:Mars:Air:Cybele,Pan,Venus,Attis,Dionysus,Astarte,Sylvanus:Healing,Fertility,Protection,Exorcism,Money
+!Pineapple:Ananas comusus:NA:Sun:Fire:NA:Luck,Money,Chastity
+!Pipsissewa:Chimaphila umbellate:False Wintergreen,Ground Holly,Price's Pine,Princess Pine:NA:NA:NA:Money,Spirit Calling
+!Pistachio:Pistachia vera:NA:Mercury:Air:NA:Breaking Love Spells
+!Plantain:Plantago spp. lanceolata,Plantago major,Plantago media:Cuckoo's Bread,Englishman's Foot,The Leaf of Patrick,Patrick's Dock,Ripple Grass,St. Patrick's Leaf,Snakebite,Snakeweed,
+Waybread,Waybraod:Venus:Earth:NA:Healing,Strength,Protection,Snake Repelling
+!Plum:Prunus domesticus:NA:Venus:Water:NA:Love,Protection
+!Wild Plum:Prunus americana:NA:Venus:Water:NA:Healing
+!Plumeria:Plumeria acutifolia:Graveyard Flowers,Temple Tree:Venus:Water:Buddha:Love
+!Poke:Phytolacca decandra,Phytolacca americana:Crowberry,Inkberry,Pigeon Berry,Pokeberry Root,Poke Root,Virginian Poke:Mars:Fire:NA:Courage,Hex-Breaking
+!Pomegranate:Punica granatum:Carthage Apple,Pound Garnet:Mercury:Fire:Persephone,Ceres:Divination,Luck,Wishes,Wealth,Fertility
+!Poplar:Populus tremuloides:NA:Saturn:Water:NA:Money,Flying
+!Poppy:Papaver spp.:Blind Buff,Blindeyes,Headaches:Moon:Water:Hypnos,Demeter:Fertility,Love,Sleep,Money,Luck,Invisibility
+!Potato:Solanum tuberosum:Blue Eyes,Flukes,Lapstones,Leather Jackets,No Eyes,Red Eyes,Rocks:Moon:Earth:NA:Image Magic,Healing
+!Prickly Ash:Zanthoxylum americanum,Zanthoxylum herculis:NA:Mars:Fire:NA:Love
+!Primrose:Primula vulgaris:Butter Rose,English Cowslip,Password:Venus:Earth:Freya:Protection,Love
+!Purslane:Portulaca oleracea:Garden Purslane,Golden Purslane,Pigweed:Moon:Water:NA:Sleep,Love,Luck,Protection,Happiness
+!Quassia:Picraena excelsa,Quassia amara:Bitter Ash:NA:NA:NA:Love
+!Quince:Cydonia spp. speciosa:Saturn:Earth:Venus:NA:Protection,Love,Happiness
+!Radish:Raphanus sativus:NA:Mars:Fire:NA:Protection,Lust
+!Ragweed:Ambrosia spp.:NA:NA:NA:NA:Courage
+!Ragwort:Senecio vulgaris,Senecio jocabaea,Senecio spp.:Cankerwort,Dog Standard,Fairies' Horses,St. James' Wort,Staggerwort,Stammerwort,Stinking Nanny,Stinking Willie:
+Venus:Water:NA:Protection
+!Raspberry:Rubus idaeus,Rubus strigosus:European Raspberry,Red Raspberry:Venus:Water:NA:Protection,Love
+!Rattlesnake Root:Polygala senega:Seneca Snakeroot,Mountain Flax,Seneca Snakeroot,Seneka:NA:NA:NA:Protection,Money
+!Rhubarb:Rheum spp. officinale,Rheum palmatum,Rheum tanguticum:NA:Venus:Earth:NA:Protection,Fidelity
+!Rice:Oryza saliva:NA:Sun:Air:NA:Protection,Rain,Money,Fertility
+!Roots:NA:NA:NA:NA:NA:Protection,Power Divination
+!Rose:Rosa spp.:NA:Venus:Water:Hathor,Hulda,Eros,Cupid,Demeter,Isis,Adonis,Harpocrates,Aurora:Love,Psychic Powers,Healing,Love Divination,Luck,Protection
+!Rosemary:Rosemarinus officinalis:Compass Weed,Dew of the Sea,Elf Leaf,Guardrobe,Incensier,Polar Plant,Sea Dew:Sun:Fire:NA:Protection,Love,Lust,Mental Powers,Exorcism,Purification,Healing,Sleep,Youth
+!Rowan:Sorbus acuparia:Delight of the Eye,Mountain Ash,Quickbane, Ran Tree,Roden-Quicken,Sorb Apple,Thor's Helper,Wicken-Tree,Wild Ash,Witchbane,Witchwood:Sun:Fire:Thor:Psychic Powers,Healing,Power,Success,Protection
+!Rue:Ruta graveolens:Garden Rue,German Rue,Herb of Grace,Herbygrass,Mother of Herbs:Mars:Fire:Diana,Aradia:Healing,Health,Mental Powers,Exorcism,Love
+!Rye:Secale spp.:NA:Venus:Earth:NA:Love,Fidelity
+!Saffron:Crocus saliva:Autumn Crocus,Crocus:Sun:Fire:Eros,Ashtoreth:Love,Healing,Happiness,Wind Raising,Lust,Strength,Psychic Powers
+!Sage:Salvia officinalis:Garden Sage,Red Sage:Jupiter:Air:NA:Immortality,Longevity,Wisdom,Protection,Wishes
+!Sagebrush:Artemisia spp. apiana,Artemisia spp.:White Sage:Venus:Earth:NA:Don't use this
+!St. John's Wort:Hypericum perforatum:Amber,Goat Weed,Herba John,John's Wort,Tipton Weed:Sun:Fire:Baldur:Health,Love Divination,Protection,Strength,Happiness
+!White Sandalwood:Santalum album:Yelow Sandalwood:Moon:Water:NA:Protection,Wishes,Healing,Exorcism,Spirituality
+!Red Sandalwood:Pterocarpus santalinus:NA:Venus:Water:NA:Love
+!Gum Sandarac:Tetraclinis articulata:Gum Juniper:Sun:Fire:NA:NA
+!Sarsaparilla:Smilax aspera:Bamboo Briar:Jupiter:Fire:NA:Love,Money
+!Sassafras:Sassafras veriifolium,Sassafras albidum:Ague Tree,Cinnamon Wood:Jupiter:Fire:NA:Health,Money
+!Summer Savory:Satureja hortensis:Garden Savory:Mercury:Air:NA:Mental Powers
+!Scullcap:Scutellatia lateriflora,Scutellatia galericulata:Greater Scullcap,Helmet Flower,Hoodwort,Madweed,Quaker Bonnet:Saturn:Water:NA:Love,Fidelity,Peace
+!Senna:Cassia marilandica,Cassia acutifolia:Locust Plant,Wild Senna:Mercury:Air:NA:Love
+!Sesame:Sesamum indicum,Sesamum orientate:NA:Sun:Fire:Ganesha:Money,Lust
+!Shallot:Allium spp.:NA:Mars:Fire:NA:Purification
+!Skunk Cabbage:Symplocarpus foetidus:Meadow Cabbage,Pole Cat Weed,Skunk Weed,Swamp Cabbage:Saturn:Water:NA:Legal Matters
+!Slippery Elm:Ulmus fulva:Indian Elm,Moose Elm,Red Elm:Saturn:Air:NA:Halts Gossip
+!Sloe:Prunus spinosa:Blackthorn,Mother of the Wood,Wishing Thorn:Mars:Fire:NA:Exorcism,Protection
+!Snakeroot:Aristolochia serpentaria:Pelican Flower,Serpentary Radix,Serpentary Rhizome,Snakeweed,Virginian Snakeroot:NA:NA:NA:Luck,Money
+!Black Snakeroot:Sanicula marilandica:NA:Mars:Fire:NA:Love,Lust,Money
+!Snapdragon:Antirrhinum majus:Calf's Snout:Mars:Fire:NA:Protection
+!Solomon's Seal:Polygonatum officinale,Polygonatum multiflorum biflorum,Polygonatum biflorum:Dropberry,Lady's Seal,St. Mary's Seal,Sealroot,Sealwort,Solomon Seal:Saturn:Water:NA:Protection,Exorcism
+!Wood Sorrel:Oxalis acetosella:Cuckoo's Meat,Fairy Bells,Sourgrass,Sour Trefoil,Stickwort,Stubwort,Three-Leaved Grass,Wood Sour:Venus:Earth:NA:Healing,Health
+!Southernwood:Artemisia abrotanum:Appleringie,Boy's Love,Lad's Love,Maid's Ruin,Old Man:Mercury:Air:NA:Love,Lust,Protection
+!Spanish Moss:Tillandsia usneoides:NA:NA:NA:NA:Protection
+!Spearmint:Mentha spicata:Brown Mint,Garden Mint,Green Mint,Green Spine,Lamb Mint,Mackeral Mint,Our Lady's Mint,Spire Mint:Venus:Water:NA:Healing,Love,Mental Powers
+!Spiderwort:Tradescantia virginia:Spider Lily:NA:NA:NA:Love
+!Spikenard:Inula conyza,Aralia racemosa:NA:Venus:Water:NA:Fidelity,Health
+!Squill:Urginea scilla,Urginea maritima,Scilla maritima:Red Squill,Sea Onion,White Squill:Mars:Fire:NA:Money,Protection,Hex-Breaking
+!Star Anise:Illicum verum:NA:Jupiter:Air:NA:Psychic Powers,Luck
+!Stillengia:Stillingia sylvatica:Queen's Delight,Queen's Root,Silver Leaf,Yaw Root:NA:NA:NA:Psychic Powers
+!Straw:NA:NA:NA:NA:NA:Luck,Image Magic
+!Strawberry:Fragaria vesca:NA:Venus:Water:Freya:Love,Luck
+!Sugar Cane:Saccharum officinarum:NA:Venus:Water:NA:Love,Lust
+!Sumbul:Ferula sumbul:Euryangium Musk Root:NA:NA:NA:Love,Psychic Powers,Health,Luck
+!Sunflower:Helianthus annus:NA:Sun:Fire:NA:Fertility,Wishes,Health,Wisdom
+!Sweetgrass:Hierochloe odorata:NA:NA:NA:NA:Calling Spirits
+!Sweatpea:Lathryus odoratus:NA:Venus:Water:NA:Friendship,Chastity,Courage,Strength
+!Tamarind:Tamarindus indicus:NA:Saturn:Water:NA:Love
+!Tamarisk:Tamarix spp.:NA:Saturn:Water:Anu:Exorcism,Protection
+!Tansy:Tanacetum vulgare:Buttons:Venus:Water:NA:Health,Longevity
+!Tea:Camellia sinensis,Camellia spp.:Black Tea:Sun:Fire:NA:Riches,Courage,Strength
+!Thistle:Carduus spp.:Lady's Thistle:Mars:Fire:Thor,Minerva:Strength,Protection,Healing,Exorcism,Hex-Breaking
+!Holy Thistle:Centaurea benedicta,Cnicus benedictus,Carbenia bendicta:Blessed Thistle:Mars:Fire:NA:Purification,Hex-Breaking
+!Milk Thistle:Carduus marianus,Sonchus oleraceus,Silybum marianum:Marian Thistle:Mars:Fire:NA:Snake-Enraging
+!Thyme:Thymus vulgaris:Common Thyme,Garden Thyme:Venus:Water:NA:Health,Healing,Sleep,Psychic Powers,Love,Purification,Courage
+!Ti:Cordyline tenninalis:Good Luck Plant:Jupiter:Fire:Kane,Lono,Pele:Protection,Healing
+!Toadflax:Linatia vulgaris:Churnstaff,Dragon Bushes,Flax Weed,Pattens and Clogs,Ramsted,Toad:Mars:Fire:NA:Protection,Hex-Breaking
+!Toadstool:NA:NA:NA:NA:NA:Rain Making
+!Tobacco:Nicotiana spp.:NA:Mars:Fire:NA:Healing,Purification
+!Tomato:Lycopersicon esculentum,Lycopersicon spp.:Love Apples:Venus:Water:NA:Prosperity,Protection,Love
+!Tonka:Dipteryx odorata,Coumarouna odorata:Coumaria Nut:Venus:Water:NA:Love,Money,Courage,Wishes
+!Tormenti:Potentilla erecta,Potentilla tormentilla:Biscuits,Bloodroot,Earthbank,Ewe Daisy,Five Fingers,Flesh and Blood,Shepherd's Knot:Sun:Fire:Thor:Protection,Love
+!Tragacanth Gum:NA:NA:Earth:Fire:NA:Binding,Transformation in the Subconscious
+!Trillium:Trillium spp. erectum:Beth Root,Indian Root,True Love:Venus:Water:NA:Money,Love,Luck
+!Tulip:Tulipa spp.:NA:Venus:Earth:NA:Prosperity,Love,Protection
+!Turmeric:Cucurma longa:NA:NA:NA:NA:Purification
+!Turnip:Brassica rapa:NA:Moon:Earth:NA:Protection,Ending Relationships
 !
