@@ -421,4 +421,34 @@ Venus:Water:NA:Protection
 !Tulip:Tulipa spp.:NA:Venus:Earth:NA:Prosperity,Love,Protection
 !Turmeric:Cucurma longa:NA:NA:NA:NA:Purification
 !Turnip:Brassica rapa:NA:Moon:Earth:NA:Protection,Ending Relationships
-!
+!Uva Ursa:Arctostaphylos uva-ursi:Arberry,Bearberry,Bear's Grape,Mealberry,Mountain Box,Mountain Cranberry,Mountain Cranberry,Red Bearberry,Sandberry,Uva Ursi:NA:NA:NA:Psychic Workings
+!Valerian:Valeriana officinalis:All-Heal,Amantilla,Bloody Butcher,Capon's Trailer,Cat's Valerian,English Valerian,Fragrant Valerian,Garden Heliotrope,Red Valerian,St. George's Herb,Vandal Root:
+Venus:Water:NA:Love,Sleep,Purification,Protection
+!Vanilla:Vanilla aromatic,Vanilla, planifolia,Vanilla tahitensis:NA:Venus:Water:NA:Love,Lust,Mental Powers
+!Venus' Flytrap:Dionaea muscipula:NA:Mars:Fire:NA:Protection,Love
+!Vervain:Verbena officinalis:Brittanica,Enchanter's Plant,Herb of Enchantment,Herb of Grace,Herb of the Cross,Holy Herb,Juno's Tears,Pigeon's Grass,Pigeonwood,Simpler's Joy,Verbena,Vervan:
+Venus:Earth:Kerridwen,Mars,Venus,Aradia,Isis,Jupiter,Thor,Juno:Love,Protection,Purification,Peace,Money,Youth,Chastity,Sleep,Healing
+!Giant Vetch:Vicia spp.:NA:NA:NA:NA:Fidelity
+!Vetivert:Andropogon zizanioides,Vetiveria zizanioides:NA:Venus:Earth:NA:Love,Hex-Breaking,Luck,Money,Anti-Theft
+!Violet:Viola odorata:Blue Violet,Sweet Violet:Venus:Water:Venus:Protection,Luck,Love,Lust,Wishes,Peace,Healing
+!Wahoo:Euonymus atropurpuraea:Burning Bush,Indian Arrow Wood,Spindle Tree:NA:NA:NA:Hex-Breaking,Courage,Success
+!Walnut:Juglans regia:English Walnut,Tree of Evil:Sun:Fire:NA:Health,Mental Powers,Infertility,Wishes
+!Wax Plant:Hoya camosa:Pentagram Flowers,Pentagram Plant:Mercury:Air:NA:Protection
+!Wheat:Triticum spp.:NA:Venus:Earth:Ceres,Demeter,Ishtar:Fertility,Money
+!Willow:Salix alba:Salicyn Willow,Saugh Tree,Tree of Enchantment,White Willow,Witches' Aspirin:Moon:Water:Artemis,Ceres,Hecate,Persephone,Hera,Mercury,Belili,Belinus:Love,Love Divination,Protection,Healing
+!Wintergreen:Gaultheria procumbens:Checkerberry,Moutain Tea,Teaberry:Moon:Water:NA:Protection,Healing,Hex-Breaking
+!Winter's Bark:Drimys winteri:True Winter's Bark,Wintera,Winter's Cinnamon:NA:NA:NA:Success
+!Witch Grass:Agropyron repens:Couch Grass,Dog Grass,Quick Grass,Witches Grass:Jupiter:NA:NA:Happiness,Lust,Love,Exorcism
+!Witch Hazel:Hamamelis virginiea:Snapping Hazelnut,Spotted Alder,Winterbloom:Sun:Fire:NA:Protection,Chastity
+!Wolf's Bane:Aconitum napellus,Arnica latifolia,Arnica montana:Aconite,Cupid's Car,Leopard's Bane,Monkshood,Storm Hat,THor's Hat,Wolf's Hat:Saturn:Water:Hecate:Protection,Invisibility
+!Wood Rose:Ipomoea tuberose:Frozen Roses,Spanish Arbor Vine:NA:NA:NA:Luck
+!Woodruff:Asperula odorata,Galium odoratum:Herb Walter,Master of the Woods,Sweet Woodruff,Wood Rove,Wuderove:Mars:Fire:NA:Victory,Protection,Money
+!Wormwood:Artemisia absinthium:Absinthe,Old Woman,Crown for a King,Madderwort,Wormot:Mars:Fire:Isis,Diana,Artemis:Psychic Powers,Protection,Love,Calling Spirits
+!Yarrow:Achillea millefolium:Bad Man's Plaything,Carpenter's Weed,Death Flower,Devil's Nettle,Eerie,Field Hops,Hundred Leaved Grass,Knight's Milfoil,Lady's Mantle,Military Herb,Noble Yarrow,Nosebleed,Old Man's Mustard,
+Old Man's Pepper,Sunguinary,Seven Year's Love,Snake's Grass,Soldier's Woundwort,Stanch Weed,Tansy,Thousand Seal,Wound Wort:Venus:Water:NA:Love,Courage,Psychic Powers,Exorcism
+!Yellow Evening Primrose:Oenothera biennis:Sundrop,Tree Primrose,Evening Primrose:NA:NA:NA:Hunting
+!Yerba Mate:Ilex paraguariensis:Mate,Paraguay Tea,Yerba:NA:NA:NA:Fidelity,Love,Lust
+!Yerba Santa:Eriodictyon glutinosum,Eriodictyon californicum:Bear Weed,Consumptive's Weed,Gum Bush,Holy Herb,Mountain Balm,Sacred Herb:NA:NA:NA:Beauty,Healing,Psychic Powers,Protection
+!Yew:Taxus baccata:NA:Saturn:Water:NA:Raising the Dead
+!Yohimbe:Pausinystalia yohimbe:NA:NA:NA:NA:Love,Lust
+!Yucca:Yucca spp. aloifolia,Yucca brevifolia,Yucca glauca,Yucca whipplei:NA:Mars:Fire:NA:Transmution,Protection,Purification
