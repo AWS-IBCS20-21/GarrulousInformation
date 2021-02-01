@@ -9,11 +9,26 @@ public class WDGUI
   private JLabel explanationLabel;
   private JLabel statusLabel;
   private JPanel controlPanel;
+  private JTextField textField;
   public String property;
+  public String target;
+  public boolean selectedProperty;
+  public boolean selectedTarget;
+
+  private JButton nameButton;
+  private JButton scientificNameButton;
+  private JButton folknameButton;
+  private JButton planetButton;
+  private JButton deitiesButton;
+  private JButton elementButton;
+  private JButton powersButton;
 
   public WDGUI()
   {
     property = "";
+    target = "";
+    selectedProperty = false;
+    selectedTarget = false;
     mainFrame = new JFrame("Witchy Database test GUI");
     mainFrame.setSize(600,300);
     mainFrame.setLayout(new GridLayout(4, 1)); //parameters: rows, cols
@@ -41,18 +56,18 @@ public class WDGUI
 
   }
 
-  public void find()
+  public void selectProperty()
   {
     headerLabel.setText("Welcome to the Witchy Database of Herbs. You can search by these prorperties:");
     explanationLabel.setText("Name will return all properties of the herb; all other search options will return name");
 
-    JButton nameButton = new JButton("Name");
-    JButton scientificNameButton = new JButton("Scientific Name");
-    JButton folknameButton = new JButton("Folk Name");
-    JButton planetButton = new JButton("Planet");
-    JButton elementButton = new JButton("Element");
-    JButton deitiesButton = new JButton("Deities");
-    JButton powersButton = new JButton("Powers");
+    nameButton = new JButton("Name");
+    scientificNameButton = new JButton("Scientific Name");
+    folknameButton = new JButton("Folk Name");
+    planetButton = new JButton("Planet");
+    elementButton = new JButton("Element");
+    deitiesButton = new JButton("Deities");
+    powersButton = new JButton("Powers");
 
     nameButton.setActionCommand("Name");
     scientificNameButton.setActionCommand("Scientific Name");
@@ -80,6 +95,23 @@ public class WDGUI
     controlPanel.add(powersButton);
 
     mainFrame.setVisible(true);
+  }
+
+  public void enterParameters()
+  {
+    headerLabel.setText("Enter the " + property + " of the herb you would like to find");
+
+    controlPanel.remove(nameButton);
+    controlPanel.remove(scientificNameButton);
+    controlPanel.remove(folknameButton);
+    controlPanel.remove(planetButton);
+    controlPanel.remove(elementButton);
+    controlPanel.remove(deitiesButton);
+    controlPanel.remove(powersButton);
+
+    textField = new JTextField();
+    controlPanel.add(textField);
+    target = textField.getText();
   }
 
   public static void main (String[] args)
@@ -117,6 +149,7 @@ public class WDGUI
         statusLabel.setText("Searching by Powers");
       }
       property = command;
+      selectedProperty = true;
     }
   }
 }
