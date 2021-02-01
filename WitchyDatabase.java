@@ -8,10 +8,12 @@ public class WitchyDatabase
 {
 
   public ArrayList<Herb> herbsList;
+  public WDGUI herbGUI;
 
   public WitchyDatabase()
   {
     herbsList = new ArrayList<Herb>();
+    herbGUI = new WDGUI();
   }
 
   public static void main (String[] args)
@@ -108,19 +110,22 @@ public class WitchyDatabase
 
   public void find()
   {
-    Scanner miniScanny = new Scanner(System.in);
+    //Scanner miniScanny = new Scanner(System.in);
     ArrayList<Herb> matches = new ArrayList<Herb>();
-    int property;
+    String property;
     String target;
 
-    System.out.println("Welcome to the Witchy Database of Herbs");
-    System.out.println("You can search by these properties: \n1. Name\n2. Scientific name\n3. Folk name");
-    System.out.println("4. Planet\n5. Element\n6. Deity\n7. Power");
-    System.out.println("*Name will return all properties of the herb; all other search options will return the name of the herb(s)");
-    System.out.println("Enter the number corresponding to the property you want to search for:");
-    property = Integer.parseInt(miniScanny.nextLine()); //so doesn't have the error later w nextLine
+    herbGUI.find();
+    property = herbGUI.property;
 
-    if(property == 1)
+    //System.out.println("Welcome to the Witchy Database of Herbs");
+    //System.out.println("You can search by these properties: \n1. Name\n2. Scientific name\n3. Folk name");
+    //System.out.println("4. Planet\n5. Element\n6. Deity\n7. Power");
+    //System.out.println("*Name will return all properties of the herb; all other search options will return the name of the herb(s)");
+    //System.out.println("Enter the number corresponding to the property you want to search for:");
+    //property = Integer.parseInt(miniScanny.nextLine()); //so doesn't have the error later w nextLine
+
+    /*if(property.equals("Name"))
     {
       System.out.println("Enter the name of the herb you would like to find:");
       target = miniScanny.nextLine().toLowerCase();
@@ -132,7 +137,7 @@ public class WitchyDatabase
         }
       }
       this.print(matches);
-    } else if(property == 2)
+    } else if(property.equals("Scientific Name"))
     {
       System.out.println("Enter the scientific name of the herb you would like to find:");
       target = miniScanny.nextLine().toLowerCase();
@@ -156,7 +161,7 @@ public class WitchyDatabase
         }
         System.out.println(matches.get(matches.size()-1).returnName());
       }
-    } else if(property == 3)
+    } else if(property.equals("Folk Name"))
     {
       System.out.println("Enter the folk name of the herb you would like to find:");
       target = miniScanny.nextLine().toLowerCase();
@@ -180,7 +185,7 @@ public class WitchyDatabase
         }
         System.out.println(matches.get(matches.size()-1).returnName());
       }
-    } else if(property == 4)
+    } else if(property.equals("Planet"))
     {
       System.out.println("Enter the planet to which you would like these herbs to correspond:");
       target = miniScanny.nextLine().toLowerCase();
@@ -201,7 +206,7 @@ public class WitchyDatabase
         }
         System.out.println(matches.get(matches.size()-1).returnName());
       }
-    } else if(property == 5)
+    } else if(property.equals("Element"))
     {
       System.out.println("Enter the element to which you would like these herbs to correspond:");
       target = miniScanny.nextLine().toLowerCase();
@@ -222,7 +227,7 @@ public class WitchyDatabase
         }
         System.out.println(matches.get(matches.size()-1).returnName());
       }
-    } else if(property == 6)
+    } else if(property.equals("Deities"))
     {
       System.out.println("Enter the deity to which you would like these herbs to correspond:");
       target = miniScanny.nextLine().toLowerCase();
@@ -246,7 +251,7 @@ public class WitchyDatabase
         }
         System.out.println(matches.get(matches.size()-1).returnName());
       }
-    } else if(property == 7)
+    } else if(property.equals("Powers"))
     {
       System.out.println("Enter the power to which you would like these herbs to correspond:");
       target = miniScanny.nextLine().toLowerCase();
@@ -272,6 +277,6 @@ public class WitchyDatabase
       }
     } else {
       System.out.println("You don't seem to have entered one of the valid choices");
-    }
+    }*/
   }
 }
