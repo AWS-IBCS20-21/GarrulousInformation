@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 
 //NEXT: GUI (later) + maybe change print format to be more readable
+//THIS IS A TEST
 
 public class WitchyDatabase
 {
