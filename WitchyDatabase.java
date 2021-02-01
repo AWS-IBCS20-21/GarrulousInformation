@@ -112,11 +112,23 @@ public class WitchyDatabase
   {
     //Scanner miniScanny = new Scanner(System.in);
     ArrayList<Herb> matches = new ArrayList<Herb>();
-    String property;
-    String target;
+    String property = "";
+    String target = "";
 
-    herbGUI.find();
-    property = herbGUI.property;
+    herbGUI.selectProperty();
+    do{
+      if(herbGUI.selectedProperty == true)
+      {
+        property = herbGUI.property;
+      }
+      //System.out.println("Looped once");
+      //System.out.println(herbGUI.selectedProperty);
+    }while(herbGUI.selectedProperty == false);
+    //problem - grabs the property before the use has entered input
+    //doesn't seem to exit the loop for some reason... did when I had it print something tho?
+    System.out.println("Property: " + property);
+    herbGUI.enterParameters();
+    target = herbGUI.target.toLowerCase();
 
     //System.out.println("Welcome to the Witchy Database of Herbs");
     //System.out.println("You can search by these properties: \n1. Name\n2. Scientific name\n3. Folk name");
@@ -125,10 +137,10 @@ public class WitchyDatabase
     //System.out.println("Enter the number corresponding to the property you want to search for:");
     //property = Integer.parseInt(miniScanny.nextLine()); //so doesn't have the error later w nextLine
 
-    /*if(property.equals("Name"))
+    if(property.equals("Name"))
     {
-      System.out.println("Enter the name of the herb you would like to find:");
-      target = miniScanny.nextLine().toLowerCase();
+      //System.out.println("Enter the name of the herb you would like to find:");
+      //target = miniScanny.nextLine().toLowerCase();
       for(int i = 0; i < herbsList.size(); i++)
       {
         if(herbsList.get(i).returnName().toLowerCase().equals(target))
@@ -139,8 +151,8 @@ public class WitchyDatabase
       this.print(matches);
     } else if(property.equals("Scientific Name"))
     {
-      System.out.println("Enter the scientific name of the herb you would like to find:");
-      target = miniScanny.nextLine().toLowerCase();
+      //System.out.println("Enter the scientific name of the herb you would like to find:");
+      //target = miniScanny.nextLine().toLowerCase();
       for(int i = 0; i < herbsList.size(); i++) //search
       {
         for(int j = 0; j < herbsList.get(i).returnScientific().length; j++) //nested for loop because it's an array
@@ -163,8 +175,8 @@ public class WitchyDatabase
       }
     } else if(property.equals("Folk Name"))
     {
-      System.out.println("Enter the folk name of the herb you would like to find:");
-      target = miniScanny.nextLine().toLowerCase();
+      //System.out.println("Enter the folk name of the herb you would like to find:");
+      //target = miniScanny.nextLine().toLowerCase();
       for(int i = 0; i < herbsList.size(); i++) //search
       {
         for(int j = 0; j < herbsList.get(i).returnfolkName().length; j++) //nested for loop because it's an array
@@ -187,8 +199,8 @@ public class WitchyDatabase
       }
     } else if(property.equals("Planet"))
     {
-      System.out.println("Enter the planet to which you would like these herbs to correspond:");
-      target = miniScanny.nextLine().toLowerCase();
+      //System.out.println("Enter the planet to which you would like these herbs to correspond:");
+      //target = miniScanny.nextLine().toLowerCase();
       for(int i = 0; i < herbsList.size(); i++) //search
       {
         if(herbsList.get(i).returnPlanet().toLowerCase().equals(target))
@@ -208,8 +220,8 @@ public class WitchyDatabase
       }
     } else if(property.equals("Element"))
     {
-      System.out.println("Enter the element to which you would like these herbs to correspond:");
-      target = miniScanny.nextLine().toLowerCase();
+      //System.out.println("Enter the element to which you would like these herbs to correspond:");
+      //target = miniScanny.nextLine().toLowerCase();
       for(int i = 0; i < herbsList.size(); i++) //search
       {
         if(herbsList.get(i).returnElement().toLowerCase().equals(target))
@@ -229,8 +241,8 @@ public class WitchyDatabase
       }
     } else if(property.equals("Deities"))
     {
-      System.out.println("Enter the deity to which you would like these herbs to correspond:");
-      target = miniScanny.nextLine().toLowerCase();
+      //System.out.println("Enter the deity to which you would like these herbs to correspond:");
+      //target = miniScanny.nextLine().toLowerCase();
       for(int i = 0; i < herbsList.size(); i++) //search
       {
         for(int j = 0; j < herbsList.get(i).returnDeities().length; j++) //nested for loop because it's an array
@@ -253,8 +265,8 @@ public class WitchyDatabase
       }
     } else if(property.equals("Powers"))
     {
-      System.out.println("Enter the power to which you would like these herbs to correspond:");
-      target = miniScanny.nextLine().toLowerCase();
+      //System.out.println("Enter the power to which you would like these herbs to correspond:");
+      //target = miniScanny.nextLine().toLowerCase();
       for(int i = 0; i < herbsList.size(); i++) //search
       {
         for(int j = 0; j < herbsList.get(i).returnPowers().length; j++) //nested for loop because it's an array
@@ -277,6 +289,6 @@ public class WitchyDatabase
       }
     } else {
       System.out.println("You don't seem to have entered one of the valid choices");
-    }*/
+    }
   }
 }
