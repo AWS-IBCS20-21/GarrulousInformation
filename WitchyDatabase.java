@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-//NEXT: a lot of data entry + GUI (later)
+//NEXT: GUI (later) + maybe change print format to be more readable
 
 public class WitchyDatabase
 {
@@ -30,25 +30,33 @@ public class WitchyDatabase
   {
     for(int i = 0; i < toBePrinted.size(); i++)
     {
-      System.out.print(toBePrinted.get(i).returnName() + ": ");
+      System.out.println("Name: " + toBePrinted.get(i).returnName());
 
-      for(int j = 0; j < toBePrinted.get(i).returnScientific().length; j++)
+      System.out.print("Scientific name: ");
+      for(int j = 0; j < toBePrinted.get(i).returnScientific().length - 1; j++)
       {
         System.out.print(toBePrinted.get(i).returnScientific()[j] + ", ");
       }
+      System.out.println(toBePrinted.get(i).returnScientific()[toBePrinted.get(i).returnScientific().length - 1]);
 
-      for(int k = 0; k < toBePrinted.get(i).returnfolkName().length; k++)
+      System.out.print("Folk name(s): ");
+      for(int k = 0; k < toBePrinted.get(i).returnfolkName().length - 1; k++)
       {
         System.out.print(toBePrinted.get(i).returnfolkName()[k] + ", ");
       }
+      System.out.println(toBePrinted.get(i).returnfolkName()[toBePrinted.get(i).returnfolkName().length - 1]);
 
-      System.out.print(toBePrinted.get(i).returnPlanet() + ", " + toBePrinted.get(i).returnElement() + ", ");
+      System.out.println("Planet: " + toBePrinted.get(i).returnPlanet());
+      System.out.println("Element: " + toBePrinted.get(i).returnElement());
 
-      for(int m = 0; m < toBePrinted.get(i).returnDeities().length; m++)
+      System.out.print("Deities: ");
+      for(int m = 0; m < toBePrinted.get(i).returnDeities().length - 1; m++)
       {
         System.out.print(toBePrinted.get(i).returnDeities()[m] + ", ");
       }
+      System.out.println(toBePrinted.get(i).returnDeities()[toBePrinted.get(i).returnDeities().length - 1]);
 
+      System.out.print("Powers: ");
       for(int n = 0; n < toBePrinted.get(i).returnPowers().length - 1; n++)
       {
         System.out.print(toBePrinted.get(i).returnPowers()[n] + ", ");
@@ -89,7 +97,7 @@ public class WitchyDatabase
         herb1.setPowers(info[6]. split(","));
 
         herbsList.add(herb1);
-        System.out.println("added: " + herb1.returnName());
+        //System.out.println("added: " + herb1.returnName()); for debugging
       }
     } catch (FileNotFoundException e)
     {
