@@ -10,6 +10,7 @@ public class WDGUI
   private JLabel statusLabel;
   private JPanel controlPanel;
   private JTextField textField;
+  private JButton enterButton;
   public String property;
   public String target;
   public boolean selectedProperty;
@@ -99,6 +100,11 @@ public class WDGUI
 
   public void enterParameters()
   {
+    enterButton = new JButton("Enter");
+    enterButton.setActionCommand("Enter");
+    enterButton.addActionListener(new ButtonClickListener());
+    controlPanel.add(enterButton);
+
     headerLabel.setText("Enter the " + property + " of the herb you would like to find");
 
     controlPanel.remove(nameButton);
@@ -109,9 +115,26 @@ public class WDGUI
     controlPanel.remove(deitiesButton);
     controlPanel.remove(powersButton);
 
-    textField = new JTextField();
+    textField = new JTextField(10);
     controlPanel.add(textField);
-    target = textField.getText();
+    do{
+      if(selectedTarget == true)
+      {
+        target = textField.getText();
+      }
+      try{
+        Thread.sleep(1000);
+      } catch(InterruptedException ex)
+      {
+        Thread.currentThread().interrupt();
+      }
+      //System.out.println(selectedTarget);
+    } while(selectedTarget == false);
+    if(selectedTarget == true)
+    {
+      target = textField.getText();
+    }
+    System.out.println("Exited target loop");
   }
 
   public static void main (String[] args)
@@ -126,6 +149,9 @@ public class WDGUI
     {
       String command = e.getActionCommand();
 
+      property = command;
+      System.out.println(property);
+      selectedProperty = true;
       if(command.equals("Name"))
       {
         statusLabel.setText("Searching by Name");
@@ -144,12 +170,14 @@ public class WDGUI
       } else if(command.equals("Deities"))
       {
         statusLabel.setText("Searching by Deities");
-      } else //if(command.equals("Powers"))
+      } else if(command.equals("Powers"))
       {
         statusLabel.setText("Searching by Powers");
+      } else if(command.equals("Enter"))
+      {
+        selectedTarget = true;
+        System.out.println("Selected target");
       }
-      property = command;
-      selectedProperty = true;
     }
   }
 }
