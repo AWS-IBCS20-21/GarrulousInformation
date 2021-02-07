@@ -115,32 +115,24 @@ public class WitchyDatabase
     String target = "";
 
     herbGUI.selectProperty();
-    do{
-      if(herbGUI.selectedProperty == true)
-      {
-        property = herbGUI.property;
-      }
+    while(herbGUI.selectedProperty == false)
+    {
       try{
-        Thread.sleep(1000);
+        Thread.sleep(100); //timing wasn't working out right - kept grabbing stuff before it was updated w user input
       } catch(InterruptedException ex)
       {
         Thread.currentThread().interrupt();
       }
-
-      //System.out.println("Looped once");
-      //System.out.println("Selected property: " + herbGUI.selectedProperty);
-    }while(herbGUI.selectedProperty == false);
-    if(herbGUI.selectedProperty == true)
-    {
-      property = herbGUI.property;
     }
+    property = herbGUI.property;
     System.out.println("Exited property loop");
     System.out.println("Property: " + property);
-    //problem - grabs the property before the use has entered input
-    //doesn't seem to exit the loop for some reason... did when I had it print something tho?
+
     herbGUI.enterParameters();
     target = herbGUI.target.toLowerCase();
     System.out.println("Target: " + target);
+
+    //NEXT: link more logically to printResults method in GUI
 
     //System.out.println("Welcome to the Witchy Database of Herbs");
     //System.out.println("You can search by these properties: \n1. Name\n2. Scientific name\n3. Folk name");
@@ -161,6 +153,7 @@ public class WitchyDatabase
         }
       }
       this.print(matches);
+      herbGUI.printResults(matches, property);
     } else if(property.equals("Scientific Name"))
     {
       //System.out.println("Enter the scientific name of the herb you would like to find:");
@@ -177,7 +170,7 @@ public class WitchyDatabase
       }
       if(matches.size() == 0)
       {
-        System.out.println("No matches");
+        System.out.println("No matches"); //maybe have printResults method w alt parameters? (Overloaded?)
       } else {
         for(int k = 0; k < matches.size() - 1; k++) //print results
         {
