@@ -110,7 +110,6 @@ public class WitchyDatabase
 
   public void find()
   {
-    //Scanner miniScanny = new Scanner(System.in);
     ArrayList<Herb> matches = new ArrayList<Herb>();
     String property = "";
     String target = "";
@@ -121,14 +120,27 @@ public class WitchyDatabase
       {
         property = herbGUI.property;
       }
+      try{
+        Thread.sleep(1000);
+      } catch(InterruptedException ex)
+      {
+        Thread.currentThread().interrupt();
+      }
+
       //System.out.println("Looped once");
-      //System.out.println(herbGUI.selectedProperty);
+      //System.out.println("Selected property: " + herbGUI.selectedProperty);
     }while(herbGUI.selectedProperty == false);
+    if(herbGUI.selectedProperty == true)
+    {
+      property = herbGUI.property;
+    }
+    System.out.println("Exited property loop");
+    System.out.println("Property: " + property);
     //problem - grabs the property before the use has entered input
     //doesn't seem to exit the loop for some reason... did when I had it print something tho?
-    System.out.println("Property: " + property);
     herbGUI.enterParameters();
     target = herbGUI.target.toLowerCase();
+    System.out.println("Target: " + target);
 
     //System.out.println("Welcome to the Witchy Database of Herbs");
     //System.out.println("You can search by these properties: \n1. Name\n2. Scientific name\n3. Folk name");
