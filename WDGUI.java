@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.*;
 
 public class WDGUI
 {
@@ -33,19 +34,13 @@ public class WDGUI
     mainFrame = new JFrame("Witchy Database test GUI");
     mainFrame.setSize(600,300);
     mainFrame.setLayout(new GridLayout(4, 1)); //parameters: rows, cols
+    mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //don't forget this guy!
 
     headerLabel = new JLabel("", JLabel.CENTER);
     explanationLabel = new JLabel("", JLabel.CENTER);
     statusLabel = new JLabel("", JLabel.CENTER);
     statusLabel.setSize(350, 100);
 
-    //mainFrame.addWindowListener(new WindowAdapter())
-    /*{
-      public void windowClosing(WindowEvent windowEvent)
-      {
-        System.exit(0); //ig sets up exit on exit?
-      }
-    }*/
     controlPanel = new JPanel(); //frame vs panel? How do they have different layouts?
     controlPanel.setLayout(new FlowLayout());
 
@@ -54,7 +49,6 @@ public class WDGUI
     mainFrame.add(controlPanel);
     mainFrame.add(statusLabel);
     mainFrame.setVisible(true);
-
   }
 
   public void selectProperty()
@@ -86,7 +80,6 @@ public class WDGUI
     deitiesButton.addActionListener(new ButtonClickListener());
     powersButton.addActionListener(new ButtonClickListener());
 
-
     controlPanel.add(nameButton);
     controlPanel.add(scientificNameButton);
     controlPanel.add(folknameButton);
@@ -100,13 +93,6 @@ public class WDGUI
 
   public void enterParameters()
   {
-    enterButton = new JButton("Enter");
-    enterButton.setActionCommand("Enter");
-    enterButton.addActionListener(new ButtonClickListener());
-    controlPanel.add(enterButton);
-
-    headerLabel.setText("Enter the " + property + " of the herb you would like to find");
-
     controlPanel.remove(nameButton);
     controlPanel.remove(scientificNameButton);
     controlPanel.remove(folknameButton);
@@ -115,26 +101,60 @@ public class WDGUI
     controlPanel.remove(deitiesButton);
     controlPanel.remove(powersButton);
 
+    enterButton = new JButton("Enter");
+    enterButton.setActionCommand("Enter");
+    enterButton.addActionListener(new ButtonClickListener());
+    controlPanel.add(enterButton);
+
+    headerLabel.setText("Enter the " + property + " of the herb you would like to find");
+
     textField = new JTextField(10);
     controlPanel.add(textField);
-    do{
-      if(selectedTarget == true)
-      {
-        target = textField.getText();
-      }
+
+    while(selectedTarget == false)
+    {
       try{
-        Thread.sleep(1000);
+        Thread.sleep(100); //not very elegant but wasn't working w timing - was doing stuff too quickly
       } catch(InterruptedException ex)
       {
         Thread.currentThread().interrupt();
       }
-      //System.out.println(selectedTarget);
-    } while(selectedTarget == false);
-    if(selectedTarget == true)
-    {
-      target = textField.getText();
     }
+      target = textField.getText();
     System.out.println("Exited target loop");
+  }
+
+  public void printResults(ArrayList<Herb> matches, String property)
+  {
+    controlPanel.remove(textField);
+    controlPanel.remove(enterButton);
+
+    JLabel nameLabel = new JLabel("", JLabel.CENTER);
+    JLabel scientificLabel = new JLabel("", JLabel.CENTER);
+    JLabel folkNameLabel = new JLabel("", JLabel.CENTER);
+    JLabel planetLabel = new JLabel("", JLabel.CENTER);
+    JLabel elementLabel = new JLabel("", JLabel.CENTER);
+    JLabel deitiesLabel = new JLabel("", JLabel.CENTER);
+    JLabel powersLabel = new JLabel("", JLabel.CENTER);
+
+    mainFrame.add(nameLabel); //is there a way to do this more efficiently?
+    mainFrame.add(scientificLabel);
+    mainFrame.add(folkNameLabel);
+    mainFrame.add(planetLabel);
+    mainFrame.add(elementLabel);
+    mainFrame.add(deitiesLabel);
+    mainFrame.add(powersLabel);
+
+    if(property.equals("Name"))
+    {
+      nameLabel.setText("Name: " + matches.get(0).returnName());
+      //figure out how to print multiple results ... altho for name it should only be one actually
+      //and then add in rest of labels
+      //currently showing up BUT now the placement is all screwed up
+    } else {
+      //will be a little different for the rest of them
+      //... can you use a for loop inside the setText method?
+    }
   }
 
   public static void main (String[] args)
