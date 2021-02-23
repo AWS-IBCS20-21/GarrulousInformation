@@ -1,8 +1,8 @@
 import java.util.*;
 import java.io.*;
 
-//NEXT: GUI (later) + maybe change print format to be more readable
-//THIS IS A TEST
+//NEXT: have searching by name display rest of properties, make layout readable
+//THIS IS A TEST (W GUI) - og version available in main branch or under OldWitchyDatabase.java
 
 public class WitchyDatabase
 {
