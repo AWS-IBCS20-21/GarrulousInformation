@@ -5,11 +5,11 @@ import java.util.*;
 
 public class WDGUI
 {
-  private JFrame mainFrame;
+  private JFrame mainFrame; //JFrame contains JPanel
   private JLabel headerLabel;
   private JLabel explanationLabel;
   private JLabel statusLabel;
-  private JPanel controlPanel;
+  private JPanel controlPanel; //needs JPanel to work
   private JTextField textField;
   private JButton enterButton;
   public String property;
@@ -80,7 +80,7 @@ public class WDGUI
     deitiesButton.addActionListener(new ButtonClickListener());
     powersButton.addActionListener(new ButtonClickListener());
 
-    controlPanel.add(nameButton);
+    controlPanel.add(nameButton); //... wait... is this supposed to be added to the JFrame instead??
     controlPanel.add(scientificNameButton);
     controlPanel.add(folknameButton);
     controlPanel.add(planetButton);
@@ -88,7 +88,7 @@ public class WDGUI
     controlPanel.add(deitiesButton);
     controlPanel.add(powersButton);
 
-    mainFrame.setVisible(true);
+    controlPanel.setVisible(true);
   }
 
   public void enterParameters()
@@ -137,23 +137,60 @@ public class WDGUI
     JLabel deitiesLabel = new JLabel("", JLabel.CENTER);
     JLabel powersLabel = new JLabel("", JLabel.CENTER);
 
-    mainFrame.add(nameLabel); //is there a way to do this more efficiently?
-    mainFrame.add(scientificLabel);
-    mainFrame.add(folkNameLabel);
-    mainFrame.add(planetLabel);
-    mainFrame.add(elementLabel);
-    mainFrame.add(deitiesLabel);
-    mainFrame.add(powersLabel);
+    mainFrame.setSize(600,600);
+    JPanel resultsFrame = new JPanel();
+    resultsFrame.setLayout(new GridLayout(4, 2));
+    resultsFrame.setVisible(true);
+    mainFrame.add(resultsFrame);
+    //controlPanel.add(resultsFrame);
+
+    /*controlPanel.add(nameLabel); //is there a way to do this more efficiently?
+    controlPanel.add(scientificLabel);
+    controlPanel.add(folkNameLabel);
+    controlPanel.add(planetLabel);
+    controlPanel.add(elementLabel);
+    controlPanel.add(deitiesLabel);
+    controlPanel.add(powersLabel);*/
+    resultsFrame.add(nameLabel); //experiment to get the layout nicer - currently not working
+    resultsFrame.add(scientificLabel);
+    resultsFrame.add(folkNameLabel);
+    resultsFrame.add(planetLabel);
+    resultsFrame.add(elementLabel);
+    resultsFrame.add(deitiesLabel);
+    resultsFrame.add(powersLabel);
 
     if(property.equals("Name"))
     {
+      //set up text for scientific names
+      String scientificTxt = "Scientific name(s): ";
+      for(int i = 0; i < matches.get(0).returnScientific().length - 1; i++)
+      {
+        scientificTxt += matches.get(0).returnScientific()[i] + ", ";
+      }
+      scientificTxt += matches.get(0).returnScientific()[matches.get(0).returnScientific().length - 1];
+
+      //set up text for folk names
+      String folkTxt = "Folk name(s): ";
+      for(int i = 0; i < matches.get(0).returnfolkName().length - 1; i++)
+      {
+        folkTxt += matches.get(0).returnfolkName()[i] + ", ";
+      }
+      folkTxt += matches.get(0).returnfolkName()[matches.get(0).returnfolkName().length - 1];
+
       nameLabel.setText("Name: " + matches.get(0).returnName());
-      //figure out how to print multiple results ... altho for name it should only be one actually
-      //and then add in rest of labels
+      scientificLabel.setText(scientificTxt);
+      folkNameLabel.setText(folkTxt);
+      planetLabel.setText("Planet: " + matches.get(0).returnPlanet());
+      elementLabel.setText("Element: " + matches.get(0).returnElement());
+      deitiesLabel.setText("Deities: placeholder");
+      powersLabel.setText("Powers: placeholder");
       //currently showing up BUT now the placement is all screwed up
+      //stick them in a miniframe w a gridlayout?
     } else {
       //will be a little different for the rest of them
       //... can you use a for loop inside the setText method?
+      //or could use for loop to make a String and then have the setText display that
+      //that's probly easier
     }
   }
 
