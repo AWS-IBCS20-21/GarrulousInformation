@@ -153,7 +153,7 @@ public class WitchyDatabase
         }
       }
       this.print(matches);
-      herbGUI.printResults(matches, property);
+      herbGUI.printResults(matches, property, target);
     } else if(property.equals("Scientific Name"))
     {
       //System.out.println("Enter the scientific name of the herb you would like to find:");
@@ -177,6 +177,7 @@ public class WitchyDatabase
           System.out.println(matches.get(k).returnName());
         }
         System.out.println(matches.get(matches.size()-1).returnName());
+        herbGUI.printResults(matches, property, target);
       }
     } else if(property.equals("Folk Name"))
     {
@@ -201,6 +202,7 @@ public class WitchyDatabase
           System.out.println(matches.get(k).returnName());
         }
         System.out.println(matches.get(matches.size()-1).returnName());
+        herbGUI.printResults(matches, property, target);
       }
     } else if(property.equals("Planet"))
     {
@@ -222,6 +224,7 @@ public class WitchyDatabase
           System.out.println(matches.get(k).returnName());
         }
         System.out.println(matches.get(matches.size()-1).returnName());
+        herbGUI.printResults(matches, property, target);
       }
     } else if(property.equals("Element"))
     {
@@ -243,6 +246,7 @@ public class WitchyDatabase
           System.out.println(matches.get(k).returnName());
         }
         System.out.println(matches.get(matches.size()-1).returnName());
+        herbGUI.printResults(matches, property, target);
       }
     } else if(property.equals("Deities"))
     {
@@ -267,6 +271,7 @@ public class WitchyDatabase
           System.out.println(matches.get(k).returnName());
         }
         System.out.println(matches.get(matches.size()-1).returnName());
+        herbGUI.printResults(matches, property, target);
       }
     } else if(property.equals("Powers"))
     {
@@ -291,6 +296,7 @@ public class WitchyDatabase
           System.out.println(matches.get(k).returnName());
         }
         System.out.println(matches.get(matches.size()-1).returnName());
+        herbGUI.printResults(matches, property, target);
       }
     } else {
       System.out.println("You don't seem to have entered one of the valid choices");
