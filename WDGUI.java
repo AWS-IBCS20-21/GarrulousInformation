@@ -171,19 +171,35 @@ public class WDGUI
 
       //set up text for folk names
       String folkTxt = "Folk name(s): ";
-      for(int i = 0; i < matches.get(0).returnfolkName().length - 1; i++)
+      for(int j = 0; j < matches.get(0).returnfolkName().length - 1; j++)
       {
-        folkTxt += matches.get(0).returnfolkName()[i] + ", ";
+        folkTxt += matches.get(0).returnfolkName()[j] + ", ";
       }
       folkTxt += matches.get(0).returnfolkName()[matches.get(0).returnfolkName().length - 1];
+
+      //set up text for deities
+      String deitiesTxt = "Deities: ";
+      for(int k = 0; k < matches.get(0).returnDeities().length - 1; k++)
+      {
+        deitiesTxt += matches.get(0).returnDeities()[k] + ", ";
+      }
+      deitiesTxt += matches.get(0).returnDeities()[matches.get(0).returnDeities().length - 1];
+
+      //set up text for powers
+      String powersTxt = "Powers: ";
+      for(int m = 0; m < matches.get(0).returnPowers().length - 1; m++)
+      {
+        powersTxt += matches.get(0).returnPowers()[m] + ", ";
+      }
+      powersTxt += matches.get(0).returnPowers()[matches.get(0),returnPowers().length - 1];
 
       nameLabel.setText("Name: " + matches.get(0).returnName());
       scientificLabel.setText(scientificTxt);
       folkNameLabel.setText(folkTxt);
       planetLabel.setText("Planet: " + matches.get(0).returnPlanet());
       elementLabel.setText("Element: " + matches.get(0).returnElement());
-      deitiesLabel.setText("Deities: placeholder");
-      powersLabel.setText("Powers: placeholder");
+      deitiesLabel.setText(folkTxt);
+      powersLabel.setText(powersTxt);
       //currently showing up BUT now the placement is all screwed up
       //stick them in a miniframe w a gridlayout?
     } else {
