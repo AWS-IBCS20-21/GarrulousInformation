@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-//NEXT: GUI (later) + maybe change print format to be more readable
+//NEXT: keep working on GUI
 
 public class WitchyDatabase
 {
