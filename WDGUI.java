@@ -124,7 +124,7 @@ public class WDGUI
     System.out.println("Exited target loop");
   }
 
-  public void printResults(ArrayList<Herb> matches, String property)
+  public void printResults(ArrayList<Herb> matches, String property, String searchTarget)
   {
     controlPanel.remove(textField);
     controlPanel.remove(enterButton);
@@ -137,27 +137,27 @@ public class WDGUI
     JLabel deitiesLabel = new JLabel("", JLabel.CENTER);
     JLabel powersLabel = new JLabel("", JLabel.CENTER);
 
-    mainFrame.setSize(600,600);
+    /*mainFrame.setSize(600,600);
     JPanel resultsFrame = new JPanel();
     resultsFrame.setLayout(new GridLayout(4, 2));
     resultsFrame.setVisible(true);
-    mainFrame.add(resultsFrame);
+    mainFrame.add(resultsFrame);*/
     //controlPanel.add(resultsFrame);
 
-    /*controlPanel.add(nameLabel); //is there a way to do this more efficiently?
+    controlPanel.add(nameLabel); //is there a way to do this more efficiently?
     controlPanel.add(scientificLabel);
     controlPanel.add(folkNameLabel);
     controlPanel.add(planetLabel);
     controlPanel.add(elementLabel);
     controlPanel.add(deitiesLabel);
-    controlPanel.add(powersLabel);*/
-    resultsFrame.add(nameLabel); //experiment to get the layout nicer - currently not working
+    controlPanel.add(powersLabel);
+    /*resultsFrame.add(nameLabel); //experiment to get the layout nicer - currently not working
     resultsFrame.add(scientificLabel);
     resultsFrame.add(folkNameLabel);
     resultsFrame.add(planetLabel);
     resultsFrame.add(elementLabel);
     resultsFrame.add(deitiesLabel);
-    resultsFrame.add(powersLabel);
+    resultsFrame.add(powersLabel);*/
 
     if(property.equals("Name"))
     {
@@ -191,18 +191,33 @@ public class WDGUI
       {
         powersTxt += matches.get(0).returnPowers()[m] + ", ";
       }
-      powersTxt += matches.get(0).returnPowers()[matches.get(0),returnPowers().length - 1];
+      powersTxt += matches.get(0).returnPowers()[matches.get(0).returnPowers().length - 1];
 
       nameLabel.setText("Name: " + matches.get(0).returnName());
       scientificLabel.setText(scientificTxt);
       folkNameLabel.setText(folkTxt);
       planetLabel.setText("Planet: " + matches.get(0).returnPlanet());
       elementLabel.setText("Element: " + matches.get(0).returnElement());
-      deitiesLabel.setText(folkTxt);
+      deitiesLabel.setText(deitiesTxt);
       powersLabel.setText(powersTxt);
       //currently showing up BUT now the placement is all screwed up
       //stick them in a miniframe w a gridlayout?
     } else {
+
+      if(matches.size() == 0)
+      {
+        nameLabel.setText("No matches");
+      } else {
+        String nameTxt = "Herbs with " + property + " " + target + ": "; //format doesn't work for properties that imply multiple (ie powers, deities)
+        for(int i = 0; i < matches.size() - 1; i++)
+        {
+          nameTxt += matches.get(i).returnName() + ", ";
+        }
+        nameTxt += matches.get(matches.size()-1).returnName();
+        //displays super weirdly if there are a bunch - just kinda goes off the screen
+        nameLabel.setText(nameTxt);
+      }
+
       //will be a little different for the rest of them
       //... can you use a for loop inside the setText method?
       //or could use for loop to make a String and then have the setText display that
