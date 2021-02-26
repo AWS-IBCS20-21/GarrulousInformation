@@ -12,15 +12,11 @@ public class SubjunctiveQuiz
   public String[] ARindicEndings;
   public String[] IRindicEndings;
   public int correct;
-  public File f;
 
   public SubjunctiveQuiz()
   {
     numQs = 0;
     correct = 0;
-    //f = new File("<file name.txt>");
-    //ARverbStems =
-    //IRverStems =
 
     File ARsubEndFile = new File("ARsubEndings.txt");
     ARsubEndings = readInFile(ARsubEndFile, ":");
@@ -28,9 +24,21 @@ public class SubjunctiveQuiz
     File IRsubEndFile = new File("IRsubEndings.txt");
     IRsubEndings = readInFile(IRsubEndFile, ":");
 
-    for(int i = 0; i<IRsubEndings.length; i++)
+    File ARindicEndFile = new File("ARindicEndings.txt");
+    ARindicEndings = readInFile(ARindicEndFile, ":");
+
+    File IRindicEndFile = new File("IRindicEndings.txt");
+    IRindicEndings = readInFile(IRindicEndFile, ":");
+
+    File IRverbStemFile = new File("IRstems.txt");
+    IRverbStems = readInFile(IRverbStemFile, ":");
+
+    File ARverbStemFile = new File("ARstems.txt");
+    ARverbStems = readInFile(ARverbStemFile, ":");
+
+    for(int i = 0; i<IRindicEndings.length; i++) //for debugging
     {
-      System.out.println(IRsubEndings[i]);
+      System.out.println(IRindicEndings[i]);
     }
   }
 
