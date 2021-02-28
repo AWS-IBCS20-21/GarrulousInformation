@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 
+//NEXT: add more recognized verb stems, display unconjugated verb instead of correct form
 public class SubjunctiveQuiz
 {
   public int numQs;
@@ -40,8 +41,8 @@ public class SubjunctiveQuiz
     ARverbStems = readInFile(ARverbStemFile, ":");
 
     //set up file to draw examples from
-    File novel = new File("ViajesPorEspaña.txt"); //trying a new one
-    //File novel = new File("MalaHierba.txt");
+    //File novel = new File("ViajesPorEspaña.txt"); //trying a new one
+    File novel = new File("MalaHierba.txt");
     try{
       Scanner novelScanner = new Scanner(novel);
       String fullText = "";
@@ -107,6 +108,8 @@ public class SubjunctiveQuiz
       }
     }*/
     Scanner scanny = new Scanner(System.in);
+    String answer = "";
+
     System.out.println("How many questions?");
     numQs = scanny.nextInt(); //need to add error handling for unexpected type <-- IMPORTANT
     indexCheatSheet = new int[numQs];
@@ -115,19 +118,33 @@ public class SubjunctiveQuiz
     for(int i = 0; i < numQs; i++)
     {
       String[] words = questions[i].split(" ");
+
       for(int k = 0; k < indexCheatSheet[i] + 1; k++)
       {
         System.out.print(words[k] + " ");
       }
-      System.out.print("________");
+
+      System.out.print("________ ");
       System.out.print("(" + words[indexCheatSheet[i] + 1] + ") "); //1 index behind since has "subjunctive/indicative" at beginning - take out later
+
       for(int m = indexCheatSheet[i] + 2; m < words.length; m++)
       {
         System.out.print(words[m] + " ");
       }
+
       System.out.println();
       System.out.println();
+      System.out.println("Enter the correct form of the verb");
+      answer = scanny.next(); //also needs error handling
+      if(answer.toLowerCase().equals(words[indexCheatSheet[i] + 1].toLowerCase()))
+      {
+        System.out.println("Correct");
+        correct ++;
+      } else {
+        System.out.println("False");
+      }
     }
+    System.out.println("Correct: " + correct + "/" + numQs);
   }
 
   public String[] generateQs(int numQs)
@@ -215,7 +232,7 @@ public class SubjunctiveQuiz
       {
         if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
         || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
-        || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr"))
+        || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr") || words[i-1].toLowerCase().contains("un"))
         {
           isNoun = true;
         }
@@ -253,7 +270,7 @@ public class SubjunctiveQuiz
       { //might want to screen out for common false positives - ex forma, tomo, entre, como
         if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
         || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
-        || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr"))
+        || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr") || words[i-1].toLowerCase().contains("un"))
         {
           isNoun = true;
         }
@@ -308,7 +325,7 @@ public class SubjunctiveQuiz
       {
         if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
         || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
-        || words[i-1].toLowerCase().equals("su"))
+        || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr") || words[i-1].toLowerCase().contains("un"))
         {
           isNoun = true;
         }
@@ -345,7 +362,7 @@ public class SubjunctiveQuiz
       {
         if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
         || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
-        || words[i-1].toLowerCase().equals("su"))
+        || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr") || words[i-1].toLowerCase().contains("un"))
         {
           isNoun = true;
         }
