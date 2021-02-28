@@ -11,6 +11,8 @@ public class SubjunctiveQuiz
   public String[] IRsubEndings;
   public String[] ARindicEndings;
   public String[] IRindicEndings;
+  public String[] questions;
+  public int[] indexCheatSheet;
   public int correct;
 
   public SubjunctiveQuiz()
@@ -38,13 +40,14 @@ public class SubjunctiveQuiz
     ARverbStems = readInFile(ARverbStemFile, ":");
 
     //set up file to draw examples from
-    File novel = new File("ViajesPorEspaña.txt");
+    File novel = new File("ViajesPorEspaña.txt"); //trying a new one
+    //File novel = new File("MalaHierba.txt");
     try{
       Scanner novelScanner = new Scanner(novel);
       String fullText = "";
       while(novelScanner.hasNextLine())
       {
-        fullText += novelScanner.nextLine();
+        fullText += novelScanner.nextLine() + " ";
       }
       //sentences = fullText.split("\\.");
       sentences = fullText.split("[-\\t;.?!:@\\[\\](){}_*/]");
@@ -81,14 +84,14 @@ public class SubjunctiveQuiz
   public static void main(String[] args)
   {
     SubjunctiveQuiz test = new SubjunctiveQuiz();
-    /*System.out.println(test.isSubjuntive("Ella quiere que bebas agua"));
+    /*System.out.println(test.isSubjunctive("Ella quiere que bebas agua"));
     System.out.println(test.isIndicative("Ella quiere que bebas agua"));
 
-    System.out.println(test.isSubjuntive("Ella quiere que hables"));
+    System.out.println(test.isSubjunctive("Ella quiere que hables"));
     System.out.println(test.isIndicative("Ella quiere que hables"));
 
     System.out.println(test.isIndicative("Ella habla conmigo"));
-    System.out.println(test.isSubjuntive("Ella habla conmigo"));*/
+    System.out.println(test.isSubjunctive("Ella habla conmigo"));*/
 
 
     test.runQuiz();
@@ -105,26 +108,79 @@ public class SubjunctiveQuiz
     }*/
     Scanner scanny = new Scanner(System.in);
     System.out.println("How many questions?");
-    numQs = scanny.nextInt(); //need to add error handling for unexpected type
+    numQs = scanny.nextInt(); //need to add error handling for unexpected type <-- IMPORTANT
+    indexCheatSheet = new int[numQs];
+    questions = generateQs(numQs);
+
+    for(int i = 0; i < numQs; i++)
+    {
+      String[] words = questions[i].split(" ");
+      for(int k = 0; k < indexCheatSheet[i] + 1; k++)
+      {
+        System.out.print(words[k] + " ");
+      }
+      System.out.print("________");
+      System.out.print("(" + words[indexCheatSheet[i] + 1] + ") "); //1 index behind since has "subjunctive/indicative" at beginning - take out later
+      for(int m = indexCheatSheet[i] + 2; m < words.length; m++)
+      {
+        System.out.print(words[m] + " ");
+      }
+      System.out.println();
+      System.out.println();
+    }
   }
 
   public String[] generateQs(int numQs)
   {
-    String[] temp = {""};
-    return temp;
+    String[] myQuestions = new String[numQs];
+    int randomPosition = 0;
+
+    int[] questionGrid = new int[numQs];
+    for(int i = 0; i < numQs; i++)
+    {
+      questionGrid[i] = (int)((Math.random())*2);
+      //System.out.println(questionGrid[i]); for debugging
+    }
+
+    for(int k = 0; k < numQs; k++)
+    {
+      if(questionGrid[k] == 0)
+      {
+        do{
+          randomPosition = (int)((Math.random())*(sentences.length));
+          if(this.isIndicative(sentences[randomPosition]) != -1) //check random sentence to see if it's indicative
+          {
+            myQuestions[k] = "Indicative: " + sentences[randomPosition]; //will want to take out "indicative" later
+            indexCheatSheet[k] = this.isIndicative(sentences[randomPosition]); //to keep track of which word in each indicative sentence is the indicative verb
+          }
+        } while (myQuestions[k] == null); //== not .equals
+      } else if (questionGrid[k] == 1)
+      {
+        do{
+          randomPosition = (int)((Math.random())*(sentences.length));
+          if(this.isSubjunctive(sentences[randomPosition]) != -1) //check random sentence to see if it's indicative
+          {
+            myQuestions[k] = "Subjunctive: " + sentences[randomPosition];
+            indexCheatSheet[k] = this.isSubjunctive(sentences[randomPosition]); //to keep track of which word in each subjunctive sentence is the subjunctive verb
+          }
+        } while (myQuestions[k] == null);
+      }
+    }
+    return myQuestions;
     //set up int[] w random numbers 1 (indicative) or 0 (subjunctive), then populate from novel
     //according to this random grid
     //also need some way to identify which verb is subjunctive in the sentence... maybe
     //variation on that method? like overloaded but w return type. is that a thing?
   }
 
-  public boolean isSubjuntive(String sentence)
+  public int isSubjunctive(String sentence) //return index of subjunctive verb in string[] of words in sentence, -1 if not subjunctive
   {
     boolean stem = false;
     boolean ending = false;
     boolean hasQue = false;
     boolean subVerb = false;
     boolean isNoun = false;
+    int verbIndex = -1;
     String temp = "";
 
     String[] words = sentence.split(" ");
@@ -159,7 +215,7 @@ public class SubjunctiveQuiz
       {
         if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
         || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
-        || words[i-1].toLowerCase().equals("su"))
+        || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr"))
         {
           isNoun = true;
         }
@@ -168,6 +224,7 @@ public class SubjunctiveQuiz
       if(ending && stem && temp.length() == 0 && isNoun == false)
       {
         subVerb = true;
+        verbIndex = i;
       } else{
         ending = false;
         stem = false;
@@ -196,7 +253,7 @@ public class SubjunctiveQuiz
       { //might want to screen out for common false positives - ex forma, tomo, entre, como
         if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
         || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
-        || words[i-1].toLowerCase().equals("su"))
+        || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr"))
         {
           isNoun = true;
         }
@@ -204,6 +261,7 @@ public class SubjunctiveQuiz
       if(stem && ending && temp.length() == 0 && isNoun == false)
       {
         subVerb = true;
+        verbIndex = i;
       }
       stem = false;
       ending = false;
@@ -212,13 +270,13 @@ public class SubjunctiveQuiz
     }
     if(subVerb && hasQue)
     {
-      return true;
+      return verbIndex;
     } else {
-      return false;
+      return -1;
     }
   }
 
-  public boolean isIndicative(String sentence) //might want to only include sentences w que? to make test better?
+  public int isIndicative(String sentence) //might want to only include sentences w que? to make test better?
   {
     boolean stem = false;
     boolean ending = false;
@@ -258,7 +316,7 @@ public class SubjunctiveQuiz
 
       if(ending && stem && temp.length() == 0 && isNoun == false)
       {
-        return true;
+        return i;
       } else{
         ending = false;
         stem = false;
@@ -295,13 +353,13 @@ public class SubjunctiveQuiz
 
       if(stem && ending && temp.length() == 0 && isNoun == false)
       {
-        return true;
+        return i;
       }
       stem = false;
       ending = false;
       temp = "";
       isNoun = false;
     }
-      return false;
+      return -1;
   }
 }
