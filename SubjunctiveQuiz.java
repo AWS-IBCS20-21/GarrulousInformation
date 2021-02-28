@@ -81,34 +81,41 @@ public class SubjunctiveQuiz
   public static void main(String[] args)
   {
     SubjunctiveQuiz test = new SubjunctiveQuiz();
-    System.out.println(test.isSubjuntive("Ella quiere que bebas agua"));
+    /*System.out.println(test.isSubjuntive("Ella quiere que bebas agua"));
     System.out.println(test.isIndicative("Ella quiere que bebas agua"));
 
     System.out.println(test.isSubjuntive("Ella quiere que hables"));
     System.out.println(test.isIndicative("Ella quiere que hables"));
 
     System.out.println(test.isIndicative("Ella habla conmigo"));
-    System.out.println(test.isSubjuntive("Ella habla conmigo"));
+    System.out.println(test.isSubjuntive("Ella habla conmigo"));*/
 
 
-    //test.runQuiz();
+    test.runQuiz();
   }
 
   public void runQuiz()
   {
-    for(int i = 0; i < sentences.length; i++)
+    /*for(int i = 0; i < sentences.length; i++)
     {
-      if(isSubjuntive(sentences[i]))
+      if(isIndicative(sentences[i]))
       {
-        System.out.println("Subjunctive: " + sentences[i]);
+        System.out.println("Indicative: " + sentences[i]);
       }
-    }
+    }*/
+    Scanner scanny = new Scanner(System.in);
+    System.out.println("How many questions?");
+    numQs = scanny.nextInt(); //need to add error handling for unexpected type
   }
 
   public String[] generateQs(int numQs)
   {
     String[] temp = {""};
     return temp;
+    //set up int[] w random numbers 1 (indicative) or 0 (subjunctive), then populate from novel
+    //according to this random grid
+    //also need some way to identify which verb is subjunctive in the sentence... maybe
+    //variation on that method? like overloaded but w return type. is that a thing?
   }
 
   public boolean isSubjuntive(String sentence)
@@ -117,6 +124,7 @@ public class SubjunctiveQuiz
     boolean ending = false;
     boolean hasQue = false;
     boolean subVerb = false;
+    boolean isNoun = false;
     String temp = "";
 
     String[] words = sentence.split(" ");
@@ -147,13 +155,24 @@ public class SubjunctiveQuiz
           //System.out.println("What's left: " + temp); //for debugging
         }
       }
-      if(ending && stem && temp.length() == 0)
+      if(i > 0) //check to see if it's actually a noun
+      {
+        if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
+        || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
+        || words[i-1].toLowerCase().equals("su"))
+        {
+          isNoun = true;
+        }
+      }
+
+      if(ending && stem && temp.length() == 0 && isNoun == false)
       {
         subVerb = true;
       } else{
         ending = false;
         stem = false;
         temp = "";
+        isNoun = false;
       }
 
       for(int l = 0; l < IRsubEndings.length; l++)
@@ -172,13 +191,24 @@ public class SubjunctiveQuiz
           temp = temp.replaceFirst(IRverbStems[m], "");
         }
       }
-      if(stem && ending && temp.length() == 0)
+
+      if(i > 0) //check again to see if it's actually a noun
+      { //might want to screen out for common false positives - ex forma, tomo, entre, como
+        if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
+        || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
+        || words[i-1].toLowerCase().equals("su"))
+        {
+          isNoun = true;
+        }
+      }
+      if(stem && ending && temp.length() == 0 && isNoun == false)
       {
         subVerb = true;
       }
       stem = false;
       ending = false;
       temp = "";
+      isNoun = false;
     }
     if(subVerb && hasQue)
     {
@@ -188,10 +218,12 @@ public class SubjunctiveQuiz
     }
   }
 
-  public boolean isIndicative(String sentence) //might want to chop off the parts it identifies and then check that nothing is left
+  public boolean isIndicative(String sentence) //might want to only include sentences w que? to make test better?
   {
     boolean stem = false;
     boolean ending = false;
+    boolean isNoun = false;
+    String temp = "";
 
     String[] words = sentence.split(" ");
 
@@ -202,6 +234,7 @@ public class SubjunctiveQuiz
         if(words[i].length() > 3 && words[i].endsWith(ARindicEndings[j]))
         {
           ending = true;
+          temp = words[i].substring(0, words[i].length()-ARindicEndings[j].length());
         }
       }
       for(int k = 0; k < ARverbStems.length; k++)
@@ -209,14 +242,28 @@ public class SubjunctiveQuiz
         if(words[i].contains(ARverbStems[k]))
         {
           stem = true;
+          temp = temp.replaceFirst(ARverbStems[k], "");
         }
       }
-      if(ending && stem)
+
+      if(i > 0) //check to see if it's actually a noun
+      {
+        if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
+        || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
+        || words[i-1].toLowerCase().equals("su"))
+        {
+          isNoun = true;
+        }
+      }
+
+      if(ending && stem && temp.length() == 0 && isNoun == false)
       {
         return true;
       } else{
         ending = false;
         stem = false;
+        temp = "";
+        isNoun = false;
       }
 
       for(int l = 0; l < IRindicEndings.length; l++)
@@ -224,6 +271,7 @@ public class SubjunctiveQuiz
         if(words[i].length() > 3 && words[i].endsWith(IRindicEndings[l]))
         {
           ending = true;
+          temp = words[i].substring(0, words[i].length()-IRindicEndings[l].length());
         }
       }
       for(int m = 0; m < IRverbStems.length; m++)
@@ -231,14 +279,28 @@ public class SubjunctiveQuiz
         if(words[i].contains(IRverbStems[m]))
         {
           stem = true;
+          temp = temp.replaceFirst(IRverbStems[m], "");
         }
       }
-      if(stem && ending)
+
+      if(i > 0) //check to see if it's actually a noun
+      {
+        if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
+        || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
+        || words[i-1].toLowerCase().equals("su"))
+        {
+          isNoun = true;
+        }
+      }
+
+      if(stem && ending && temp.length() == 0 && isNoun == false)
       {
         return true;
       }
       stem = false;
       ending = false;
+      temp = "";
+      isNoun = false;
     }
       return false;
   }
