@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-//NEXT: add more recognized verb stems, display unconjugated verb instead of correct form
+//NEXT: add more recognized verb stems, fix infinitives for ER verbs
 public class SubjunctiveQuiz
 {
   public int numQs;
@@ -14,6 +14,7 @@ public class SubjunctiveQuiz
   public String[] IRindicEndings;
   public String[] questions;
   public int[] indexCheatSheet;
+  public int[] questionGrid;
   public int correct;
 
   public SubjunctiveQuiz()
@@ -125,7 +126,8 @@ public class SubjunctiveQuiz
       }
 
       System.out.print("________ ");
-      System.out.print("(" + words[indexCheatSheet[i] + 1] + ") "); //1 index behind since has "subjunctive/indicative" at beginning - take out later
+      System.out.print("(" + this.getInfinitive(words[indexCheatSheet[i] + 1]) + ") ");
+      //System.out.print("(" + words[indexCheatSheet[i] + 1] + ") "); //1 index behind since has "subjunctive/indicative" at beginning - take out later
 
       for(int m = indexCheatSheet[i] + 2; m < words.length; m++)
       {
@@ -141,10 +143,29 @@ public class SubjunctiveQuiz
         System.out.println("Correct");
         correct ++;
       } else {
-        System.out.println("False");
+        System.out.println("False: " + words[indexCheatSheet[i]+1]);
       }
     }
-    System.out.println("Correct: " + correct + "/" + numQs);
+    System.out.println("Total correct: " + correct + "/" + numQs);
+  }
+
+  public String getInfinitive(String verb) //forgot that I put ER and IR verbs together... may need to fix that
+  {
+      for(String s: ARverbStems)
+      {
+        if(verb.startsWith(s))
+        {
+          return s + "ar";
+        }
+      }
+      for(String s: IRverbStems)
+      {
+        if(verb.startsWith(s))
+        {
+          return s + "ir";
+        }
+      }
+      return "";
   }
 
   public String[] generateQs(int numQs)
@@ -152,7 +173,7 @@ public class SubjunctiveQuiz
     String[] myQuestions = new String[numQs];
     int randomPosition = 0;
 
-    int[] questionGrid = new int[numQs];
+    questionGrid = new int[numQs];
     for(int i = 0; i < numQs; i++)
     {
       questionGrid[i] = (int)((Math.random())*2);
