@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-//NEXT: GUI
+//NEXT: keep working on GUI
 public class SubjunctiveQuiz
 {
   public int numQs;
@@ -17,11 +17,13 @@ public class SubjunctiveQuiz
   public int[] indexCheatSheet;
   public int[] questionGrid;
   public int correct;
+  public SQGUI quizGUI;
 
   public SubjunctiveQuiz()
   {
     numQs = 0;
     correct = 0;
+    quizGUI = new SQGUI();
 
     //set up reference files to determine verb tense
     File ARsubEndFile = new File("ARsubEndings.txt");
@@ -100,58 +102,65 @@ public class SubjunctiveQuiz
     System.out.println(test.isIndicative("Ella habla conmigo"));
     System.out.println(test.isSubjunctive("Ella habla conmigo"));*/
 
-
-    //test.runQuiz();
-
-    SQGUI quizGUI = new SQGUI();
-    quizGUI.getNumQs();
+    test.runQuiz();
+    //quizGUI.getNumQs();
   }
 
   public void runQuiz()
   {
-    /*for(int i = 0; i < sentences.length; i++)
-    {
-      if(isIndicative(sentences[i]))
-      {
-        System.out.println("Indicative: " + sentences[i]);
-      }
-    }*/
     Scanner scanny = new Scanner(System.in);
     String answer = "";
 
-    System.out.println("How many questions?");
+    numQs = quizGUI.getNumQs();
+
+    /*System.out.println("How many questions?");
     try{
       numQs = scanny.nextInt();
     } catch (InputMismatchException e)
     {
       System.out.println("You don't seem to have entered a valid number"); //error handling so it doesn't crash if user inputs a letter
       System.exit(0); //so doesn't print irrelevant information
-    }
+    }*/
+
     indexCheatSheet = new int[numQs];
     questions = generateQs(numQs);
 
     for(int i = 0; i < numQs; i++)
     {
+      String completeQ = "";
+
       String[] words = questions[i].split(" ");
 
       for(int k = 0; k < indexCheatSheet[i] + 1; k++)
       {
-        System.out.print(words[k] + " ");
+        completeQ += words[k] + " ";
       }
+      /*for(int k = 0; k < indexCheatSheet[i] + 1; k++)
+      {
+        System.out.print(words[k] + " ");
+      }*/
 
-      System.out.print("________ ");
-      System.out.print("(" + this.getInfinitive(words[indexCheatSheet[i] + 1]) + ") ");
+      completeQ += "________ ";
+      completeQ += "(" + this.getInfinitive(words[indexCheatSheet[i] + 1]) + ") ";
+      //System.out.print("________ ");
+      //System.out.print("(" + this.getInfinitive(words[indexCheatSheet[i] + 1]) + ") ");
       //System.out.print("(" + words[indexCheatSheet[i] + 1] + ") "); //1 index behind since has "subjunctive/indicative" at beginning - take out later
 
       for(int m = indexCheatSheet[i] + 2; m < words.length; m++)
       {
-        System.out.print(words[m] + " ");
+        completeQ += words[m] + " ";
       }
 
-      System.out.println();
-      System.out.println();
-      System.out.println("Enter the correct form of the verb");
-        answer = scanny.next();
+      /*for(int m = indexCheatSheet[i] + 2; m < words.length; m++)
+      {
+        System.out.print(words[m] + " ");
+      }*/
+
+      //System.out.println();
+      //System.out.println();
+      //System.out.println("Enter the correct form of the verb");
+        //answer = scanny.next();
+      answer = quizGUI.runQuiz(completeQ);
       if(answer.toLowerCase().equals(words[indexCheatSheet[i] + 1].toLowerCase()))
       {
         System.out.println("Correct");
