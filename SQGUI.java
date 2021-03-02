@@ -2,6 +2,9 @@ import java.util.*;
 import java.io.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+
+//NEXT: make sure all of question fits on screen, display end screen, clear text field after entering answer
 
 public class SQGUI
 {
@@ -11,9 +14,16 @@ public class SQGUI
   public JButton enterButton;
   public JLabel headerLabel;
   public JLabel explanationLabel;
+  public boolean chosenQs;
+  public boolean enteredAnswer;
+  public int numQs;
 
   public SQGUI()
   {
+    chosenQs = false;
+    enteredAnswer = false;
+    numQs = 0;
+
     mainFrame = new JFrame("Subjunctive Quiz");
     mainFrame.setSize(600,300);
     mainFrame.setLayout(new GridLayout(4, 1));
@@ -39,7 +49,8 @@ public class SQGUI
   public int getNumQs()
   {
     enterButton = new JButton("Enter");
-    //enterButton.addActionListener(new ButtonListener());
+    enterButton.addActionListener(new ButtonListener());
+    enterButton.setActionCommand("Question number");
     controlPanel.add(enterButton); //why am I adding it here and not to mainFrame?
 
     myTextField = new JTextField(10);
@@ -48,22 +59,63 @@ public class SQGUI
     headerLabel.setText("Welcome to the Subjunctive Quiz");
     explanationLabel.setText("Enter the number of questions for this session");
 
-    int numQs = 0;
+    while(chosenQs == false)
+    {
+      try{
+        Thread.sleep(100); //not very elegant but wasn't working w timing - was doing stuff too quickly
+      } catch(InterruptedException ex)
+      {
+        Thread.currentThread().interrupt();
+      }
+    }
+    try{
+      numQs = Integer.parseInt(myTextField.getText()); //since had to conver from String to int
+    } catch (NumberFormatException e)
+    {
+      System.out.println("You don't seem to have entered a valid number"); //error handling so it doesn't crash if user inputs a letter
+      System.exit(0); //so doesn't print irrelevant information
+    }
+
+    System.out.println("Exited target loop");
+
+    explanationLabel.setText("You have chosen " + numQs + " questions"); //for debugging
     return numQs;
   }
 
-  public void runQuiz()
+  public String runQuiz(String question)
   {
+    String answer = "";
+    enteredAnswer = false;
+    headerLabel.setText("Enter the correct form of the verb");
+    explanationLabel.setText(question);
+    enterButton.setActionCommand("Answered");
 
+    while(enteredAnswer == false)
+    {
+      try{
+        Thread.sleep(100); //not very elegant but wasn't working w timing - was doing stuff too quickly
+      } catch(InterruptedException ex)
+      {
+        Thread.currentThread().interrupt();
+      }
+      answer = myTextField.getText(); //since had to conver from String to int
+    }
+    System.out.println("Exited answer loop");
+    return answer;
   }
 
+  private class ButtonListener implements ActionListener
+  {
+    public void actionPerformed(ActionEvent e)
+    {
+      String command = e.getActionCommand();
+      if(command.equals("Question number"))
+      {
+        chosenQs = true;
+      } else if(command.equals("Answered"))
+      {
+        enteredAnswer = true;
+      }
+    }
+  }
 }
-
-//SUPER not working, we'll get back to this
-/*private class ButtonListener implements ActionListener
-{
-  public void actionPerformed(ActionEvent e)
-  {
-    //do something
-  }
-}*/
