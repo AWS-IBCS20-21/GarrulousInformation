@@ -1,13 +1,14 @@
 import java.util.*;
 import java.io.*;
 
-//NEXT: add more recognized verb stems, fix infinitives for ER verbs
+//NEXT: GUI
 public class SubjunctiveQuiz
 {
   public int numQs;
   public String[] sentences;
   public String[] ARverbStems;
   public String[] IRverbStems;
+  public String[] ERverbStems;
   public String[] ARsubEndings;
   public String[] IRsubEndings;
   public String[] ARindicEndings;
@@ -40,6 +41,9 @@ public class SubjunctiveQuiz
 
     File ARverbStemFile = new File("ARstems.txt");
     ARverbStems = readInFile(ARverbStemFile, ":");
+
+    File ERverbStemFile = new File("ERstems.txt");
+    ERverbStems = readInFile(ERverbStemFile, ":");
 
     //set up file to draw examples from
     //File novel = new File("ViajesPorEspaña.txt"); //trying a new one
@@ -86,6 +90,7 @@ public class SubjunctiveQuiz
   public static void main(String[] args)
   {
     SubjunctiveQuiz test = new SubjunctiveQuiz();
+    //for testing
     /*System.out.println(test.isSubjunctive("Ella quiere que bebas agua"));
     System.out.println(test.isIndicative("Ella quiere que bebas agua"));
 
@@ -96,7 +101,10 @@ public class SubjunctiveQuiz
     System.out.println(test.isSubjunctive("Ella habla conmigo"));*/
 
 
-    test.runQuiz();
+    //test.runQuiz();
+
+    SQGUI quizGUI = new SQGUI();
+    quizGUI.getNumQs();
   }
 
   public void runQuiz()
@@ -112,7 +120,13 @@ public class SubjunctiveQuiz
     String answer = "";
 
     System.out.println("How many questions?");
-    numQs = scanny.nextInt(); //need to add error handling for unexpected type <-- IMPORTANT
+    try{
+      numQs = scanny.nextInt();
+    } catch (InputMismatchException e)
+    {
+      System.out.println("You don't seem to have entered a valid number"); //error handling so it doesn't crash if user inputs a letter
+      System.exit(0); //so doesn't print irrelevant information
+    }
     indexCheatSheet = new int[numQs];
     questions = generateQs(numQs);
 
@@ -137,7 +151,7 @@ public class SubjunctiveQuiz
       System.out.println();
       System.out.println();
       System.out.println("Enter the correct form of the verb");
-      answer = scanny.next(); //also needs error handling
+        answer = scanny.next();
       if(answer.toLowerCase().equals(words[indexCheatSheet[i] + 1].toLowerCase()))
       {
         System.out.println("Correct");
@@ -163,6 +177,13 @@ public class SubjunctiveQuiz
         if(verb.startsWith(s))
         {
           return s + "ir";
+        }
+      }
+      for(String s: ERverbStems)
+      {
+        if(verb.startsWith(s))
+        {
+          return s + "er";
         }
       }
       return "";
@@ -286,9 +307,18 @@ public class SubjunctiveQuiz
           temp = temp.replaceFirst(IRverbStems[m], "");
         }
       }
+      //IR and ER verbs have same endings, so check if either IR or ER verb w these endings
+      for(int n = 0; n < ERverbStems.length; n++)
+      {
+        if(words[i].contains(ERverbStems[n]))
+        {
+          stem = true;
+          temp = temp.replaceFirst(ERverbStems[n], "");
+        }
+      }
 
       if(i > 0) //check again to see if it's actually a noun
-      { //might want to screen out for common false positives - ex forma, tomo, entre, como
+      {
         if(words[i-1].toLowerCase().equals("el") || words[i-1].toLowerCase().equals("la") || words[i-1].toLowerCase().equals("los")
         || words[i-1].toLowerCase().equals("los") || words[i-1].toLowerCase().equals("mi") || words[i-1].toLowerCase().equals("tu")
         || words[i-1].toLowerCase().equals("su") || words[i-1].toLowerCase().contains("nuestr") || words[i-1].toLowerCase().contains("un"))
@@ -376,6 +406,15 @@ public class SubjunctiveQuiz
         {
           stem = true;
           temp = temp.replaceFirst(IRverbStems[m], "");
+        }
+      }
+      //IR and ER verbs have same endings, so check if either IR or ER verb w these endings
+      for(int n = 0; n < ERverbStems.length; n++)
+      {
+        if(words[i].contains(ERverbStems[n]))
+        {
+          stem = true;
+          temp = temp.replaceFirst(ERverbStems[n], "");
         }
       }
 
