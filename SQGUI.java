@@ -4,16 +4,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-//NEXT: make sure all of question fits on screen, display end screen, clear text field after entering answer
+//NEXT: make sure all of question fits on screen
 
 public class SQGUI
 {
   public JPanel controlPanel;
+  public JPanel questionPanel; //possible solution so question shows
   public JFrame mainFrame;
   public JTextField myTextField;
   public JButton enterButton;
   public JLabel headerLabel;
   public JLabel explanationLabel;
+  public JLabel correctLabel;
   public boolean chosenQs;
   public boolean enteredAnswer;
   public int numQs;
@@ -31,13 +33,18 @@ public class SQGUI
 
     headerLabel = new JLabel("", JLabel.CENTER);
     explanationLabel = new JLabel("", JLabel.CENTER);
+    correctLabel = new JLabel("", JLabel.CENTER);
 
     controlPanel = new JPanel();
     controlPanel.setLayout(new FlowLayout());
 
+    questionPanel = new JPanel();
+    questionPanel.setLayout(new FlowLayout());
+
     mainFrame.add(headerLabel);
     mainFrame.add(explanationLabel);
     mainFrame.add(controlPanel);
+    mainFrame.add(questionPanel);
     mainFrame.setVisible(true);
   }
 
@@ -78,7 +85,7 @@ public class SQGUI
 
     System.out.println("Exited target loop");
 
-    explanationLabel.setText("You have chosen " + numQs + " questions"); //for debugging
+    //explanationLabel.setText("You have chosen " + numQs + " questions"); //for debugging
     return numQs;
   }
 
@@ -89,6 +96,7 @@ public class SQGUI
     headerLabel.setText("Enter the correct form of the verb");
     explanationLabel.setText(question);
     enterButton.setActionCommand("Answered");
+    myTextField.setText("");
 
     while(enteredAnswer == false)
     {
@@ -100,8 +108,42 @@ public class SQGUI
       }
       answer = myTextField.getText(); //since had to conver from String to int
     }
-    System.out.println("Exited answer loop");
+    System.out.println("Exited answer loop"); //for debugging
+    //myTextField.setText("");
+    System.out.println("Changed textfield");
     return answer;
+  }
+
+  public void showImmediateResult(boolean answer, String correctAnswer)
+  {
+    mainFrame.add(correctLabel);
+    System.out.println("Added correctLabel w no text");
+    if(answer)
+    {
+      correctLabel.setText("Correct");
+    } else {
+      correctLabel.setText("False: " + correctAnswer);
+    }
+    System.out.print("set text");
+
+    try{
+      Thread.sleep(600); //so displays for a while and then moves on
+    } catch(InterruptedException ex)
+    {
+      Thread.currentThread().interrupt();
+    }
+    //mainFrame.remove(correctLabel);
+    correctLabel.setText("");
+    System.out.println("removed label");
+  }
+
+  public void showFinalResult(int correct)
+  {
+    controlPanel.remove(enterButton);
+    controlPanel.remove(myTextField);
+    headerLabel.setText("");
+
+    explanationLabel.setText("Total correct: " + correct + "/" + numQs);
   }
 
   private class ButtonListener implements ActionListener
