@@ -160,16 +160,19 @@ public class SubjunctiveQuiz
       //System.out.println();
       //System.out.println("Enter the correct form of the verb");
         //answer = scanny.next();
-      answer = quizGUI.runQuiz(completeQ);
+      answer = quizGUI.runQuiz(completeQ.trim());
       if(answer.toLowerCase().equals(words[indexCheatSheet[i] + 1].toLowerCase()))
       {
         System.out.println("Correct");
+        quizGUI.showImmediateResult(true, "");
         correct ++;
       } else {
         System.out.println("False: " + words[indexCheatSheet[i]+1]);
+        quizGUI.showImmediateResult(false, words[indexCheatSheet[i]+1]);
       }
     }
     System.out.println("Total correct: " + correct + "/" + numQs);
+    quizGUI.showFinalResult(correct);
   }
 
   public String getInfinitive(String verb) //forgot that I put ER and IR verbs together... may need to fix that
