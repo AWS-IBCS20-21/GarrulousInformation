@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-//NEXT: make sure all of question fits on screen
+//NEXT: everything fits on screen, but add some space so it doesn't look squished
 
 public class SQGUI
 {
@@ -39,10 +39,11 @@ public class SQGUI
     controlPanel.setLayout(new FlowLayout());
 
     questionPanel = new JPanel();
-    questionPanel.setLayout(new FlowLayout());
+    questionPanel.setLayout(new BorderLayout(100, 100));
 
     mainFrame.add(headerLabel);
     mainFrame.add(explanationLabel);
+    mainFrame.add(questionPanel);
     mainFrame.add(controlPanel);
     mainFrame.add(questionPanel);
     mainFrame.setVisible(true);
@@ -59,9 +60,11 @@ public class SQGUI
     enterButton.addActionListener(new ButtonListener());
     enterButton.setActionCommand("Question number");
     controlPanel.add(enterButton); //why am I adding it here and not to mainFrame?
+    //questionPanel.add(enterButton, BorderLayout.CENTER);
 
     myTextField = new JTextField(10);
     controlPanel.add(myTextField);
+    //questionPanel.add(myTextField, BorderLayout.CENTER);
 
     headerLabel.setText("Welcome to the Subjunctive Quiz");
     explanationLabel.setText("Enter the number of questions for this session");
@@ -94,7 +97,12 @@ public class SQGUI
     String answer = "";
     enteredAnswer = false;
     headerLabel.setText("Enter the correct form of the verb");
-    explanationLabel.setText(question);
+    mainFrame.remove(explanationLabel);
+    mainFrame.remove(controlPanel);
+    questionPanel.add(explanationLabel, BorderLayout.NORTH);
+    mainFrame.add(controlPanel);
+    //kinda works... displays all text but button and textfield are weridly low now
+    explanationLabel.setText("<html><p>" + question + "</p></html>");
     enterButton.setActionCommand("Answered");
     myTextField.setText("");
 
@@ -108,9 +116,6 @@ public class SQGUI
       }
       answer = myTextField.getText(); //since had to conver from String to int
     }
-    System.out.println("Exited answer loop"); //for debugging
-    //myTextField.setText("");
-    System.out.println("Changed textfield");
     return answer;
   }
 
@@ -132,8 +137,8 @@ public class SQGUI
     {
       Thread.currentThread().interrupt();
     }
-    //mainFrame.remove(correctLabel);
     correctLabel.setText("");
+    mainFrame.remove(correctLabel);
     System.out.println("removed label");
   }
 
@@ -141,9 +146,13 @@ public class SQGUI
   {
     controlPanel.remove(enterButton);
     controlPanel.remove(myTextField);
+    //questionPanel.remove(enterButton);
+    //questionPanel.remove(myTextField);
+
     headerLabel.setText("");
 
-    explanationLabel.setText("Total correct: " + correct + "/" + numQs);
+    mainFrame.remove(controlPanel);
+    explanationLabel.setText("Total correct: " + correct + "/" + numQs); //currently in right place... probably messed up when I fix earlier positioning tho
   }
 
   private class ButtonListener implements ActionListener
