@@ -9,7 +9,7 @@ import java.awt.event.*;
 public class SQGUI
 {
   public JPanel controlPanel;
-  public JPanel questionPanel; //possible solution so question shows
+  public JPanel questionPanel;
   public JFrame mainFrame;
   public JTextField myTextField;
   public JButton enterButton;
@@ -101,7 +101,6 @@ public class SQGUI
     mainFrame.remove(controlPanel);
     questionPanel.add(explanationLabel, BorderLayout.NORTH);
     mainFrame.add(controlPanel);
-    //kinda works... displays all text but button and textfield are weridly low now
     explanationLabel.setText("<html><p>" + question + "</p></html>");
     enterButton.setActionCommand("Answered");
     myTextField.setText("");
@@ -114,7 +113,7 @@ public class SQGUI
       {
         Thread.currentThread().interrupt();
       }
-      answer = myTextField.getText(); //since had to conver from String to int
+      answer = myTextField.getText(); //since had to convert from String to int
     }
     return answer;
   }
@@ -152,7 +151,7 @@ public class SQGUI
     headerLabel.setText("");
 
     mainFrame.remove(controlPanel);
-    explanationLabel.setText("Total correct: " + correct + "/" + numQs); //currently in right place... probably messed up when I fix earlier positioning tho
+    explanationLabel.setText("Total correct: " + correct + "/" + numQs);
   }
 
   private class ButtonListener implements ActionListener
