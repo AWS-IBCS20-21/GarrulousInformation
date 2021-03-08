@@ -138,6 +138,8 @@ public class SubjunctiveQuiz
   public String getInfinitive(String verb)
   {
     //if verb matches AR stem, return stem + ar, forming infinitive
+
+
     for(String s: ARverbStems)
     {
       if(verb.startsWith(s))
@@ -191,7 +193,8 @@ public class SubjunctiveQuiz
           if(this.isIndicative(sentences[randomPosition]) != -1) //check random sentence to see if it's indicative
           {
             myQuestions[k] = sentences[randomPosition];
-            indexCheatSheet[k] = this.isIndicative(sentences[randomPosition]); //to keep track of which word in each indicative sentence is the indicative verb
+            //to keep track of which word in each indicative sentence is the indicative verb
+            indexCheatSheet[k] = this.isIndicative(sentences[randomPosition]);
           }
         } while (myQuestions[k] == null); //== not .equals for null
       } else if (questionGrid[k] == 1) //1 corresponds to subjunctive sentence
@@ -201,7 +204,8 @@ public class SubjunctiveQuiz
           if(this.isSubjunctive(sentences[randomPosition]) != -1) //check random sentence to see if it's indicative
           {
             myQuestions[k] = sentences[randomPosition];
-            indexCheatSheet[k] = this.isSubjunctive(sentences[randomPosition]); //to keep track of which word in each subjunctive sentence is the subjunctive verb
+            //to keep track of which word in each subjunctive sentence is the subjunctive verb
+            indexCheatSheet[k] = this.isSubjunctive(sentences[randomPosition]);
           }
         } while (myQuestions[k] == null);
       }
