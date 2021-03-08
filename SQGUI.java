@@ -4,8 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-//NEXT: everything fits on screen, but add some space so it doesn't look squished
-
 public class SQGUI
 {
   public JPanel controlPanel;
@@ -59,12 +57,10 @@ public class SQGUI
     enterButton = new JButton("Enter");
     enterButton.addActionListener(new ButtonListener());
     enterButton.setActionCommand("Question number");
-    controlPanel.add(enterButton); //why am I adding it here and not to mainFrame?
-    //questionPanel.add(enterButton, BorderLayout.CENTER);
+    controlPanel.add(enterButton);
 
     myTextField = new JTextField(10);
     controlPanel.add(myTextField);
-    //questionPanel.add(myTextField, BorderLayout.CENTER);
 
     headerLabel.setText("Welcome to the Subjunctive Quiz");
     explanationLabel.setText("Enter the number of questions for this session");
@@ -79,16 +75,13 @@ public class SQGUI
       }
     }
     try{
-      numQs = Integer.parseInt(myTextField.getText()); //since had to conver from String to int
+      numQs = Integer.parseInt(myTextField.getText()); //since had to convert from String to int
     } catch (NumberFormatException e)
     {
-      System.out.println("You don't seem to have entered a valid number"); //error handling so it doesn't crash if user inputs a letter
+      //error handling so it doesn't crash if user inputs a letter
+      System.out.println("You don't seem to have entered a valid number");
       System.exit(0); //so doesn't print irrelevant information
     }
-
-    System.out.println("Exited target loop");
-
-    //explanationLabel.setText("You have chosen " + numQs + " questions"); //for debugging
     return numQs;
   }
 
@@ -121,14 +114,12 @@ public class SQGUI
   public void showImmediateResult(boolean answer, String correctAnswer)
   {
     mainFrame.add(correctLabel);
-    System.out.println("Added correctLabel w no text");
     if(answer)
     {
       correctLabel.setText("Correct");
     } else {
       correctLabel.setText("False: " + correctAnswer);
     }
-    System.out.print("set text");
 
     try{
       Thread.sleep(600); //so displays for a while and then moves on
@@ -138,15 +129,12 @@ public class SQGUI
     }
     correctLabel.setText("");
     mainFrame.remove(correctLabel);
-    System.out.println("removed label");
   }
 
   public void showFinalResult(int correct)
   {
     controlPanel.remove(enterButton);
     controlPanel.remove(myTextField);
-    //questionPanel.remove(enterButton);
-    //questionPanel.remove(myTextField);
 
     headerLabel.setText("");
 
