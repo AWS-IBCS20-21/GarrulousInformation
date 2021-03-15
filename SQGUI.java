@@ -79,7 +79,13 @@ public class SQGUI
     } catch (NumberFormatException e)
     {
       //error handling so it doesn't crash if user inputs a letter
-      System.out.println("You don't seem to have entered a valid number");
+      errorMessage();
+      try{
+        Thread.sleep(3000); //display message for a minute
+      } catch(InterruptedException ex)
+      {
+        Thread.currentThread().interrupt();
+      }
       System.exit(0); //so doesn't print irrelevant information
     }
     return numQs;
@@ -140,6 +146,14 @@ public class SQGUI
 
     mainFrame.remove(controlPanel);
     explanationLabel.setText("Total correct: " + correct + "/" + numQs);
+  }
+
+  public void errorMessage()
+  {
+    headerLabel.setText("");
+    explanationLabel.setText("You don't seem to have entered a valid number");
+    controlPanel.remove(enterButton);
+    controlPanel.remove(myTextField);
   }
 
   private class ButtonListener implements ActionListener
