@@ -223,7 +223,7 @@ public class WDGUI
           propertyStr = property;
         } else if(property.equals("Deities"))
         {
-          propertyStr = "Deity";
+          propertyStr = "Deity"; //correct for grammar when it prints results
         } else {
           propertyStr = "Power";
         }
@@ -236,11 +236,6 @@ public class WDGUI
         //displays super weirdly if there are a bunch - just kinda goes off the screen
         nameLabel.setText(nameTxt);
       }
-
-      //will be a little different for the rest of them
-      //... can you use a for loop inside the setText method?
-      //or could use for loop to make a String and then have the setText display that
-      //that's probly easier
     }
   }
 
