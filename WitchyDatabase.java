@@ -170,7 +170,8 @@ public class WitchyDatabase
       }
       if(matches.size() == 0)
       {
-        System.out.println("No matches"); //maybe have printResults method w alt parameters? (Overloaded?)
+        System.out.println("No matches");
+        herbGUI.printResults(matches, property, target); //pretty sure this is redundant - have it print either way, so can take out printing to terminal
       } else {
         for(int k = 0; k < matches.size() - 1; k++) //print results
         {
@@ -196,6 +197,7 @@ public class WitchyDatabase
       if(matches.size() == 0)
       {
         System.out.println("No matches");
+        herbGUI.printResults(matches, property, target);
       } else {
         for(int k = 0; k < matches.size() - 1; k++) //print results
         {
@@ -218,6 +220,7 @@ public class WitchyDatabase
       if(matches.size() == 0)
       {
         System.out.println("No matches");
+        herbGUI.printResults(matches, property, target);
       } else {
         for(int k = 0; k < matches.size() - 1; k++) //print results
         {
@@ -240,6 +243,7 @@ public class WitchyDatabase
       if(matches.size() == 0)
       {
         System.out.println("No matches");
+        herbGUI.printResults(matches, property, target);
       } else {
         for(int k = 0; k < matches.size() - 1; k++) //print results
         {
@@ -265,6 +269,7 @@ public class WitchyDatabase
       if(matches.size() == 0)
       {
         System.out.println("No matches");
+        herbGUI.printResults(matches, property, target);
       } else {
         for(int k = 0; k < matches.size() - 1; k++) //print results
         {
@@ -290,6 +295,7 @@ public class WitchyDatabase
       if(matches.size() == 0) //so it doesn't have an indexOutOfBounds error
       {
         System.out.println("No matches");
+        herbGUI.printResults(matches, property, target);
       } else {
         for(int k = 0; k < matches.size() - 1; k++) //print results
         {
