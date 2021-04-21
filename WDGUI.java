@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
+//NEXT: if searching by non-name property w lots of results, will go off the screen
+
 public class WDGUI
 {
   private JFrame mainFrame; //JFrame contains JPanel
@@ -161,54 +163,71 @@ public class WDGUI
 
     if(property.equals("Name"))
     {
-      //set up text for scientific names
-      String scientificTxt = "Scientific name(s): ";
-      for(int i = 0; i < matches.get(0).returnScientific().length - 1; i++)
+      if(matches.size() == 0)
       {
-        scientificTxt += matches.get(0).returnScientific()[i] + ", ";
-      }
-      scientificTxt += matches.get(0).returnScientific()[matches.get(0).returnScientific().length - 1];
+        nameLabel.setText("No matches");
+      } else {
+        //set up text for scientific names
+        String scientificTxt = "Scientific name(s): ";
 
-      //set up text for folk names
-      String folkTxt = "Folk name(s): ";
-      for(int j = 0; j < matches.get(0).returnfolkName().length - 1; j++)
-      {
-        folkTxt += matches.get(0).returnfolkName()[j] + ", ";
-      }
-      folkTxt += matches.get(0).returnfolkName()[matches.get(0).returnfolkName().length - 1];
+        for(int i = 0; i < matches.get(0).returnScientific().length - 1; i++)
+        {
+          scientificTxt += matches.get(0).returnScientific()[i] + ", ";
+        }
+        scientificTxt += matches.get(0).returnScientific()[matches.get(0).returnScientific().length - 1];
 
-      //set up text for deities
-      String deitiesTxt = "Deities: ";
-      for(int k = 0; k < matches.get(0).returnDeities().length - 1; k++)
-      {
-        deitiesTxt += matches.get(0).returnDeities()[k] + ", ";
-      }
-      deitiesTxt += matches.get(0).returnDeities()[matches.get(0).returnDeities().length - 1];
+        //set up text for folk names
+        String folkTxt = "Folk name(s): ";
+        for(int j = 0; j < matches.get(0).returnfolkName().length - 1; j++)
+        {
+          folkTxt += matches.get(0).returnfolkName()[j] + ", ";
+        }
+        folkTxt += matches.get(0).returnfolkName()[matches.get(0).returnfolkName().length - 1];
 
-      //set up text for powers
-      String powersTxt = "Powers: ";
-      for(int m = 0; m < matches.get(0).returnPowers().length - 1; m++)
-      {
-        powersTxt += matches.get(0).returnPowers()[m] + ", ";
-      }
-      powersTxt += matches.get(0).returnPowers()[matches.get(0).returnPowers().length - 1];
+        //set up text for deities
+        String deitiesTxt = "Deities: ";
+        for(int k = 0; k < matches.get(0).returnDeities().length - 1; k++)
+        {
+          deitiesTxt += matches.get(0).returnDeities()[k] + ", ";
+        }
+        deitiesTxt += matches.get(0).returnDeities()[matches.get(0).returnDeities().length - 1];
 
-      nameLabel.setText("Name: " + matches.get(0).returnName());
-      scientificLabel.setText(scientificTxt);
-      folkNameLabel.setText(folkTxt);
-      planetLabel.setText("Planet: " + matches.get(0).returnPlanet());
-      elementLabel.setText("Element: " + matches.get(0).returnElement());
-      deitiesLabel.setText(deitiesTxt);
-      powersLabel.setText(powersTxt);
-      //currently showing up BUT now the placement is all screwed up
-      //stick them in a miniframe w a gridlayout?
+        //set up text for powers
+        String powersTxt = "Powers: ";
+        for(int m = 0; m < matches.get(0).returnPowers().length - 1; m++)
+        {
+          powersTxt += matches.get(0).returnPowers()[m] + ", ";
+        }
+        powersTxt += matches.get(0).returnPowers()[matches.get(0).returnPowers().length - 1];
+
+        nameLabel.setText("Name: " + matches.get(0).returnName());
+        scientificLabel.setText(scientificTxt);
+        folkNameLabel.setText(folkTxt);
+        planetLabel.setText("Planet: " + matches.get(0).returnPlanet());
+        elementLabel.setText("Element: " + matches.get(0).returnElement());
+        deitiesLabel.setText(deitiesTxt);
+        powersLabel.setText(powersTxt);
+        //currently showing up BUT now the placement is all screwed up
+        //stick them in a miniframe w a gridlayout?
+      }
     } else {
 
       if(matches.size() == 0)
       {
         nameLabel.setText("No matches");
       } else {
-        String nameTxt = "Herbs with " + property + " " + target + ": "; //format doesn't work for properties that imply multiple (ie powers, deities)
+        String propertyStr;
+        if(property.equals("Name") || property.equals("Scientific Name") || property.equals("Folk Name")
+        || property.equals("Planet") || property.equals("Element"))
+        {
+          propertyStr = property;
+        } else if(property.equals("Deities"))
+        {
+          propertyStr = "Deity";
+        } else {
+          propertyStr = "Power";
+        }
+        String nameTxt = "Herbs with " + propertyStr + " " + target + ": "; //format doesn't work for properties that imply multiple (ie powers, deities)
         for(int i = 0; i < matches.size() - 1; i++)
         {
           nameTxt += matches.get(i).returnName() + ", ";
